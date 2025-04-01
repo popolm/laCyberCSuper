@@ -44,7 +44,22 @@
 - acceptez-vous les cookies ?
 
 - bonnes pratiques logiciel
--
+
+
+Question patron :
+
+- Avez-vous désigné une personne en charge de la cybersécurité ?
+- Avez-vous une charte informatique ?
+- Avez-vous mis en place une politique de gestion des accès ?
+- Avez-vous un plan de reprise d'activité ?
+- Avez-vous une politique de sauvegarde des données ?
+- Sensibilisez-vous vos collaborateurs ? A quelle fréquence ? Sur quels sujets ?
+- Avez-vous mis en place le télétravail ? Séparez-vous les usages pro / perso ?
+- Comment gérez-vous le risque numérique lors des déplacements professionnels ?
+- Êtes-vous assuré contre le risque cyber ?
+- Avez-vous une procédure de réponse à une cyber-attaque ?
+
+
 
 ## conseils
 
