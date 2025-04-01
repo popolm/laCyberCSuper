@@ -1,269 +1,152 @@
-Johan
-.m.orange
-Away
-laCyberCSuper
-
-pop’s added Déimos to the group. — 09:56
-pop’s added yoyoo to the group. — 09:57
-yoyoo added Johan to the group. — 09:57
-yoyoo added Amyante to the group. — 09:57
-pop’s — 09:59
-https://www.figma.com/design/aZgnpX2VcscIB4hWcTSnRK/LaCyberCSuper?node-id=0-1&p=f&t=4esleCbGqyYg9G1W-0
-Figma
-LaCyberCSuper
-Created with Figma
-Déimos changed the channel name: laCyberC'estUnPeuSympa — 10:15
-pop’s — 11:01
-Image
-Image
-pop’s — 11:42
-Image
-PanDharma — 12:03
-Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ? (Oui/Non)
-Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ? (Oui/Non)
-Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin (principe du moindre privilège) ? (Oui/Non)
-
-
- Sécurisation des équipements et des accès :
-Avez-vous mis en place une politique de gestion des mots de passe pour les employés ? (Oui/Non)
-Avez-vous mis en place du télétravail pour les utilisateurs ? (Oui/Non)
-    Si oui -> Le télétravail est-il sécurisé par un VPN pour tous les collaborateurs qui travaillent à distance ? (Oui/Non)
-    Si non -v
-Avez-vous mis en place un système de double authentification (2FA) sur les outils sensibles ? (Oui/Non)
-Les sauvegardes de données sont-elles effectuées régulièrement et stockées dans un lieu sécurisé ? (Oui/Non)
-Les appareils mobiles professionnels (téléphones, tablettes) sont-ils sécurisés (verrouillage, chiffrement) ? (Oui/Non)
-
-
- Prévention des risques et formation :
-Les employés sont-ils formés régulièrement aux bonnes pratiques de cybersécurité et aux risques (phishing, ransomwares, etc.) ? (Oui/Non)
-Avez-vous une procédure de gestion des accès lors du départ d'un collaborateur (désactivation des comptes, récupération des équipements) ? (Oui/Non)
-Un audit de sécurité est-il réalisé à chaque mise à jour majeure de votre infrastructure ? (Oui/Non)
-Les périphériques (clés USB, disques durs externes) sont-ils sécurisés ou interdits dans l'entreprise ? (Oui/Non)
-
-
- Gestion des données sensibles :
-Les données sensibles sont-elles chiffrées lorsqu'elles sont stockées ou transmises ? (Oui/Non)
-Les accès aux serveurs et aux données sensibles sont-ils strictement contrôlés et enregistrés ? (Oui/Non)
-Avez-vous mis en place des outils de détection d'intrusions pour prévenir toute activité suspecte sur votre réseau ? (Oui/Non)
-Des tests de pénétration sont-ils effectués pour évaluer la sécurité de vos systèmes ? (Oui/Non)
-
-
-Mise en situation 1 :
-En tant que DSI, vous recevez une alerte concernant une tentative d'intrusion sur le réseau interne de l'entreprise.
-👉 Que faites-vous ?
-
-a) Je contacte immédiatement les responsables techniques pour analyser l'incident. ✅
-
-b) J'ignore l'alerte car il s'agit probablement d'une fausse alerte. ❌
-
-c) Je préviens les collaborateurs de ne pas se connecter pendant quelques heures. ❌
-
-📝 Mise en situation 2 :
-Vous devez créer un accès temporaire pour un prestataire externe.
-👉 Comment gérez-vous cet accès ?
-
-a) Je donne un accès illimité à tous les fichiers nécessaires. ❌
-
-b) Je définis des droits d'accès limités et prévois une date d’expiration pour cet accès. ✅
-
-c) Je donne l'accès à tout le réseau interne pour que le prestataire puisse travailler plus librement. ❌
-
-
-Avez-vous un responsable désigné pour superviser la cybersécurité dans l'entreprise ? (Oui/Non)
-Amyante — 14:08
-https://fr.freepik.com/vecteurs-premium/logo-forteresse-du-trou-cle_368856709.htm#fromView=search&page=2&position=44&uuid=c3fe4434-c894-4f84-8970-6048a1186a89&query=Logo+Design+cadenas
-https://fr.freepik.com/vecteurs-libre/bouclier-gradient-logo-design-logo-illustration_42162177.htm#fromView=search&page=1&position=2&uuid=c3fe4434-c894-4f84-8970-6048a1186a89&query=Logo+Design+cadenas
-deux suggestions de logos sympas
-pop’s — 14:08
-on verra les logos après ^^ 🙃
-l'inconvénient la dedans c'est qu'on ne peut pas modifier le texte et les couleurs étant donné que c'est une image
-Amyante — 14:09
-yes c'est ceux que j'avais déjà trouvés, c'était avant de passer à ma nouvelle mission 😊
-il y a Gimp pour ça, ça se fait facilement 😊
-Déimos — 14:13
-Vous avez la même pp faut arrêter
-pop’s — 14:13
-omg oui
-la folie
-Amyante — 14:14
-CyberSlothcurity
-Déimos — 14:22
-Image
-pop’s changed the channel name: laCyberC — 15:14
-pop’s changed the channel name: laCyberCSuper — 15:14
-Amyante — 15:21
-https://drive.google.com/file/d/1hTe8KhyhsrKVt5_dpBZUK_xxvgZZJj4w/view?usp=drive_link
-Johan — 15:40
-{
-    "Question" : {
-        "id" : 1,
-        "value" : "Votre mot de passe contient-t-il ?"
-    },
-    "Type_rep" : {
-        "QCM"
-    },
-    "Reponse_possibles" : {
-        "Choix1" : "Minuscules",
-        "Choix2" : "Majuscules",
-        "Choix3" : "Chiffres",
-        "Choix4" : "Caractères spéciaux",
-        "Choix5" : "Au moins 12 caractères"
-    },
-    "Conseil" : {}
-}
-pop’s — 15:48
 [
-    {
-        "Question": {
-            "id": 1,
-            "value": "Avez-vous une DSI dans votre entreprise ?"
-        },
-Expand
-questionnaire_patron.json
-4 KB
-[
-    {
-        "Question": {
-            "id": 1,
-            "value": "Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ?"
-        },
-Expand
-questionnaire_dsi.json
-4 KB
-[
-    {
-        "Question": {
-            "id": 1,
-            "value": "Votre mot de passe contient-il des caractères variés ?"
-        },
-Expand
-questionnaire_cybersecurite.json
-5 KB
-﻿
-[
-    {
-        "Question": {
-            "id": 1,
-            "value": "Votre mot de passe contient-il des caractères variés ?"
-        },
-        "Type_rep": "QCM",
-        "Reponse_possibles": {
-            "Choix1": "Minuscules",
-            "Choix2": "Majuscules",
-            "Choix3": "Chiffres",
-            "Choix4": "Caractères spéciaux",
-            "Choix5": "Au moins 8 caractères"
-        },
-        
-        "Conseil": "Utilisez un mot de passe complexe avec majuscules, minuscules, chiffres, caractères spéciaux et au moins 12 caractères."
+  {
+    "Question": {
+      "id": 1,
+      "value": "Votre mot de passe contient-il des caractères variés ?"
     },
-    {
-        "Question": {
-            "id": 2,
-            "value": "Quand avez-vous changé votre mot de passe pour la dernière fois ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Ce mois-ci",
-            "Choix2": "Il y a plus de 3 mois",
-            "Choix3": "Il y a plus d’un an",
-            "Choix4": "Jamais"
-        },
-        "Conseil": "Changez régulièrement vos mots de passe, au moins tous les 3 mois."
+    "Type_rep": "QCM",
+    "Reponse_possibles": {
+      "Choix1": "Minuscules",
+      "Choix2": "Majuscules",
+      "Choix3": "Chiffres",
+      "Choix4": "Caractères spéciaux",
+      "Choix5": "Au moins 12 caractères"
     },
-    {
-        "Question": {
-            "id": 3,
-            "value": "Où gardez-vous votre mot de passe ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Dans un fichier texte sur l’ordinateur",
-            "Choix2": "Je m’en souviens",
-            "Choix3": "Dans un gestionnaire de mots de passe",
-            "Choix4": "Sur un post-it"
-        },
-        "Conseil": "Utilisez un gestionnaire de mots de passe pour stocker vos identifiants de manière sécurisée."
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1", "Choix2", "Choix3", "Choix4", "Choix5"]
     },
-    {
-        "Question": {
-            "id": 4,
-            "value": "Votre poste de travail est-il protégé par un mot de passe ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Verrouillez toujours votre poste avec un mot de passe pour éviter tout accès non autorisé."
+    "Conseil": "Il est admis qu'un bon mot de passe doit comporter au minimum 12 signes mélangeant des majuscules, des minuscules, des chiffres et des caractères spéciaux. Évitez d’employer dans vos mots de passe des informations personnelles qui pourraient être faciles à retrouver (sur les réseaux sociaux par exemple), comme le prénom de votre enfant, une date anniversaire ou votre groupe de musique préféré.."
+  },
+  {
+    "Question": {
+      "id": 2,
+      "value": "Quand avez-vous changé votre mot de passe pour la dernière fois ?"
     },
-    {
-        "Question": {
-            "id": 5,
-            "value": "Utilisez-vous la double authentification (2FA) ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "La double authentification ajoute une couche de sécurité essentielle à vos comptes."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Ce mois-ci",
+      "Choix2": "Il y a plus de 3 mois",
+      "Choix3": "Il y a plus d’un an",
+      "Choix4": "Jamais"
     },
-    {
-        "Question": {
-            "id": 6,
-            "value": "Que fait la commande Windows + L ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Lance le gestionnaire de tâches",
-            "Choix2": "Verrouille la session",
-            "Choix3": "Ferme la session",
-            "Choix4": "Ouvre les paramètres"
-        },
-        "Conseil": "Utilisez Windows + L pour verrouiller rapidement votre session lorsque vous vous absentez."
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
     },
-    {
-        "Question": {
-            "id": 7,
-            "value": "Comment gérez-vous les mises à jour de votre ordinateur ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Je les installe dès qu'elles sont disponibles",
-            "Choix2": "Je les installe tous les 6 mois",
-            "Choix3": "Je ne les installe jamais"
-        },
-        "Conseil": "Installez les mises à jour dès qu’elles sont disponibles pour corriger les failles de sécurité."
+    "Conseil": "Identifier les mots de passe faibles, réutilisés ou anciens et les remplacer par des plus complexes permet de renforcer la confidentialité. Les experts recommandent de changer les mots de passe tous les 90 jours pour garder les comptes sécurisés et les acteurs malveillants à distance. Cela vaut également pour les dossiers de fichiers protégés par une clé de sécurité."
+  },
+  {
+    "Question": {
+      "id": 3,
+      "value": "Où gardez-vous votre mot de passe ?"
     },
-    {
-        "Question": {
-            "id": 8,
-            "value": "Quels usages avez-vous de votre ordinateur professionnel ?"
-        },
-        "Type_rep": "QCM",
-        "Reponse_possibles": {
-            "Choix1": "Messagerie professionnelle",
-            "Choix2": "Téléchargements personnels",
-            "Choix3": "Réseaux sociaux",
-            "Choix4": "Usage exclusivement professionnel"
-        },
-        "Conseil": "Évitez les usages personnels sur un ordinateur professionnel pour limiter les risques de sécurité."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Dans un fichier texte sur l’ordinateur",
+      "Choix2": "Je m’en souviens",
+      "Choix3": "Dans un gestionnaire de mots de passe",
+      "Choix4": "Sur un post-it"
     },
-    {
-        "Question": {
-            "id": 9,
-            "value": "Que faites-vous si vous recevez un mail d’un inconnu ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Je clique sur les liens",
-            "Choix2": "Je le signale ou le supprime",
-            "Choix3": "Je réponds au message",
-            "Choix4": "Je transfère à mes collègues"
-        },
-        "Conseil": "En cas de doute, ne cliquez sur aucun lien et signalez le message à la DSI."
-    }
+    "Réponse_attendue": {
+      "isCorrect": ["Choix3"]
+    },
+    "Conseil": "Il est humainement impossible de retenir les dizaines de mots de passe longs et complexes que chacun est amené à utiliser quotidiennement. Ne commettez pas pour autant l’erreur de les noter sur un pense-bête que vous laisseriez à proximité de votre équipement, ni de les inscrire dans votre messagerie ou dans un fichier non protégé de votre ordinateur, ou encore dans votre téléphone mobile auquel un cybercriminel pourrait avoir accès. Apprenez à utiliser un gestionnaire de mot de passe sécurisé qui s’en chargera à votre place, pour ne plus avoir à retenir que le seul mot de passe qui permet d’en ouvrir l’accès."
+  },
+  {
+    "Question": {
+      "id": 4,
+      "value": "Votre poste de travail est-il protégé par un mot de passe ?"
+    },
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Lorsque l'on quitte son bureau il est important de verrouiller sa session, pour plusieurs raisons de sécurité. N'importe quelle personne ayant accès physiquement à votre poste pourrait avoir accès facilement aux fichiers qui s'y trouvent, et les récupérer (documents ouverts en cours, parfois confidentiels ou tout simplement privés). Cette personne pourrait également accéder au réseau de l'établissement, notamment aux espaces de stockages et aux documents de vos collègues. Cette personne pourrait envoyer des mails, des documents sous votre identité, et avoir accès à votre carnet d'adresse. Il est donc essentiel de bien verrouiller son poste dès que l'on s'éloigne de son ordinateur. Pour le faire de manière rapide, vous pouvez utiliser un raccourci clavier : touche Windows + touche lettre L."
+  },
+  {
+    "Question": {
+      "id": 5,
+      "value": "Utilisez-vous la double authentification (2FA) ?"
+    },
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Pour renforcer la sécurité de vos accès, de plus en plus de services proposent cette option. En plus de votre nom de compte et de votre mot de passe, ces services vous demandent une confirmation que vous pouvez recevoir, par exemple, sous forme de code provisoire reçu par SMS ou par courrier électronique (e-mail), via une application ou une clé spécifique que vous contrôlez, ou encore par reconnaissance biométrique. Ainsi grâce à cette confirmation, vous seul pourrez autoriser un nouvel appareil à se connecter aux comptes protégés."
+  },
+  {
+    "Question": {
+      "id": 6,
+      "value": "Que fait la commande Windows + L ?"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Lance le gestionnaire de tâches",
+      "Choix2": "Verrouille la session",
+      "Choix3": "Ferme la session",
+      "Choix4": "Ouvre les paramètres"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix2"]
+    },
+    "Conseil": "Utilisez la combinaison de touches Windows + L pour verrouiller rapidement votre session lorsque vous vous absentez."
+  },
+  {
+    "Question": {
+      "id": 7,
+      "value": "Comment gérez-vous les mises à jour de votre ordinateur ?"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Je les installe dès qu'elles sont disponibles",
+      "Choix2": "Je les installe tous les 6 mois",
+      "Choix3": "Je ne les installe jamais"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "On a parfois tendance à repousser le moment de la mise à jour, en pensant gagner du temps sur notre travail. Or c’est une erreur, les mises à jour existent justement pour faciliter et optimiser votre utilisation de l’outil ou du système d’exploitation (OS). En effet, elles interviennent pour supprimer des bugs ou appliquer des correctifs, dans le but d’améliorer l’expérience de l’utilisateur. Elles sont également essentielles dans la protection des appareils et des applications, car elles permettent de solutionner des failles de sécurité. Evidemment, les mises à jour permettent également d’accéder aux nouvelles fonctionnalités et d’améliorer l’ergonomie et le design d’un logiciel ou d’un système d’exploitation. Pour être certain de bénéficier du système d’information le plus performant et le plus adapté à vos besoins, rien de mieux que de faire appel à un professionnel de l’infogérance. Dans le cadre d’un contrat d’infogérance, le prestataire a une visibilité sur l’état des logiciels et des systèmes d’exploitation de tous les postes informatiques. Il peut procéder aux mises à jour à distance sans impacter le travail de vos collaborateurs. Faire appel à un prestataire d’infogérance pour la gestion de son système d’information et la gestion des mises à jour en entreprise permet de se décharger de toutes contraintes informatiques et permet à ses collaborateurs, de se recentrer sur leur activité."
+  },
+  {
+    "Question": {
+      "id": 8,
+      "value": "Quels usages avez-vous de votre ordinateur professionnel ?"
+    },
+    "Type_rep": "QCM",
+    "Reponse_possibles": {
+      "Choix1": "Messagerie personnelle",
+      "Choix2": "Téléchargements personnels",
+      "Choix3": "Réseaux sociaux",
+      "Choix4": "Usage exclusivement professionnel"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix4"]
+    },
+    "Conseil": "Avec l’avènement d’Internet et l’évolution des usages, la frontière entre vie professionnelle et vie personnelle devient de plus en plus poreuse. Pour sécuriser au mieux vos usages numériques dans ces différents environnements, appliquez ces quelques bonnes pratiques : évitez d'utiliser vos moyens personnels (adresse mail, téléphone mobile, clé USB, etc.) à des fins professionnelles et inversement, ne connectez pas d’équipements personnels, ou non fournis par votre service informatique, au réseau de votre entité ou à un équipement professionnel (téléphone mobile personnel, clé USB ou gadget électronique offert, etc.), à l’inverse, ne connectez vos équipements professionnels sur votre réseau personnel que dans les conditions prévues par votre service informatique et enfin, n’utilisez pas votre adresse mail professionnelle pour vous inscrire sur des sites Internet à titre personnel et réciproquement."
+  },
+  {
+    "Question": {
+      "id": 9,
+      "value": "Que faites-vous si vous recevez un mail d’un inconnu ?"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Je clique sur les liens",
+      "Choix2": "Je le signale",
+      "Choix3": "Je réponds au message",
+      "Choix4": "Je transfère à mes collègues",
+      "Choix5": "Je le supprime"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix2", "Choix5"]
+    },
+    "Conseil": "L'hameçonnage (ou phishing en anglais) désigne une technique frauduleuse qui consiste à usurper l’identité d’un organisme connu (banque, opérateurs, etc) ou d’un proche pour récupérer des informations. Quelques règles simples permettent de l'éviter. Ne cliquez jamais sur un lien ou une pièce jointe qui vous semblent douteux. En cas de suspicion, passez la souris sur le lien pour voir apparaître l'adresse vers laquelle il dirige et appréciez sa légitimité. Ne répondez jamais à un mail suspect. Au moindre doute, contactez l'expéditeur par un autre canal. Vérifiez les paramètres de sécurité de votre compte de messagerie. Si le fournisseur de messagerie le permet, activez la double authentification pour sécuriser vos accès."
+  }
 ]
-questionnaire_cybersecurite.json
-5 KB
