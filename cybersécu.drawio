@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" version="26.2.2">
   <diagram name="Page-1" id="MEmLe3A7KJkm9bz0CJbK">
-    <mxGraphModel dx="7967" dy="3735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3378" dy="2134" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,7 +28,7 @@
         <mxCell id="XYnisLN_ejTITq2cwccM-20" value="êtes vous sûr ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
           <mxGeometry x="540" y="210" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-21" value="page conseils" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+        <mxCell id="XYnisLN_ejTITq2cwccM-21" value="page conseils général + contact" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
           <mxGeometry x="540" y="300" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XYnisLN_ejTITq2cwccM-20" target="XYnisLN_ejTITq2cwccM-4">
@@ -47,61 +47,55 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-25" value="&lt;div&gt;votre mdp contient-il...&lt;/div&gt;&lt;div&gt;caractères spéciaux&lt;/div&gt;&lt;div&gt;maj/minuscules&lt;/div&gt;&lt;div&gt;+ 8 caractères&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="260" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="XYnisLN_ejTITq2cwccM-4" target="XYnisLN_ejTITq2cwccM-25">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="350" y="430" as="sourcePoint" />
-            <mxPoint x="400" y="380" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry x="-330" y="380" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-27" value="utilisez-vous la double authentification ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
-          <mxGeometry x="-50" y="450" width="120" height="60" as="geometry" />
+          <mxGeometry x="-510" y="560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-28" value="où gardez-vous votre mdp ? post-it/dans votre tête/un gestionnaire de mdp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="450" width="120" height="60" as="geometry" />
+          <mxGeometry x="-330" y="560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-29" value="avez-vous partagé votre mot de passe avec un collègue ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
-          <mxGeometry x="310" y="450" width="120" height="60" as="geometry" />
+          <mxGeometry x="-150" y="560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-30" value="quand avez-vous changé votre mdp pour la dernière fois ? 3 mois/un an/jamais" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="350" width="120" height="60" as="geometry" />
+          <mxGeometry x="-330" y="470" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-31" value="&lt;div&gt;votre poste de travail est-il protégé par un mdp ?&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="555" width="120" height="60" as="geometry" />
+          <mxGeometry x="-330" y="660" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-32" value="mdp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
-          <mxGeometry x="-130" y="260" width="120" height="60" as="geometry" />
+          <mxGeometry x="-570" y="380" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-33" value="mise en situation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
-          <mxGeometry x="-120" y="1370" width="120" height="60" as="geometry" />
+          <mxGeometry x="-570" y="1140" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-34" value="que fait la commande windows+L ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
-          <mxGeometry x="-40" y="560" width="120" height="60" as="geometry" />
+          <mxGeometry x="-510" y="660" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-35" value="que faites-vous d&#39;une clé USB trouvée par terre dans un couloir ? (je la mets sur mon poste/je l&#39;envoie à la DSI/je la ramène chez moi)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1500" width="120" height="110" as="geometry" />
+          <mxGeometry x="-330" y="1340" width="120" height="110" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-36" value="quels usages avez-vous de votre ordinateur ? pro uniquement/messagerie et réseaux sociaux/téléchargements perso" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="910" width="120" height="120" as="geometry" />
+          <mxGeometry x="-330" y="970" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-37" value="avez-vous un antivirus ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1070" width="120" height="60" as="geometry" />
+        <mxCell id="XYnisLN_ejTITq2cwccM-37" value="Les appareils mobiles professionnels (téléphones, tablettes) sont-ils sécurisés (verrouillage, chiffrement) ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1550" width="120" height="130" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-38" value="comment gérez-vous les màj de votre ordi ? (dès qu&#39;elle est proposées/tous les six mois/jamais)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="750" width="120" height="120" as="geometry" />
+          <mxGeometry x="-330" y="820" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-39" value="quand vous recevez un mail d&#39;un expéditeur inconnu (faire exemple) que faitez-vous ? (je clique, je vérifie l&#39;expéditeur/)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1310" width="120" height="150" as="geometry" />
+          <mxGeometry x="-330" y="1150" width="120" height="150" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-40" value="DSI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="-110" y="2080" width="120" height="60" as="geometry" />
+          <mxGeometry x="130" y="350" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-41" value="usages au quotidien" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
-          <mxGeometry x="-120" y="810" width="120" height="60" as="geometry" />
+          <mxGeometry x="-570" y="820" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-42" value="au bout de combien de temps sont supprimés les accès d&#39;un collaborateur qui a quitté l&#39;entreprise ? une journée/six mois/jamais" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="2070" width="120" height="120" as="geometry" />
+        <mxCell id="XYnisLN_ejTITq2cwccM-42" value="&lt;br class=&quot;Apple-interchange-newline&quot;&gt;&lt;p&gt;Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ? (Oui/Non)&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="470" width="120" height="110" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-43" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="XYnisLN_ejTITq2cwccM-3" target="XYnisLN_ejTITq2cwccM-20">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -109,20 +103,101 @@
             <mxPoint x="300" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-44" value="avez-vous des caméras ? Si oui, qui a accès aux images ? combien de temps sont-elles conservées ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="2230" width="120" height="100" as="geometry" />
+        <mxCell id="XYnisLN_ejTITq2cwccM-44" value="Avez-vous mis en place un système de double authentification (2FA) sur les outils sensibles ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1270" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-45" value="un collègue a laissé son ordinateur déverrouillé, que fais-je ? Je le verrouille/ je le croissante/je ne fais rien" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1650" width="120" height="120" as="geometry" />
+          <mxGeometry x="-330" y="1490" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-46" value="&lt;div&gt;qui a accès aux serveurs et aux archives ?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="2360" width="120" height="100" as="geometry" />
+        <mxCell id="XYnisLN_ejTITq2cwccM-46" value="Les sauvegardes de données sont-elles effectuées régulièrement et stockées dans un lieu sécurisé ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1410" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="XYnisLN_ejTITq2cwccM-47" value="je suis en télétravail. Pour me connecter à mon espace de travail, je peux me connecter (via wifi perso/wifi public/VPN)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1840" width="120" height="140" as="geometry" />
+          <mxGeometry x="-330" y="1660" width="120" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="XYnisLN_ejTITq2cwccM-49" value="page conseils mdp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
-          <mxGeometry x="400" y="600" width="120" height="60" as="geometry" />
+        <mxCell id="XYnisLN_ejTITq2cwccM-50" value="êtes-vous collaborateur/DSI/patron ?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-51" value="collaborateur" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-52" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XYnisLN_ejTITq2cwccM-50" target="XYnisLN_ejTITq2cwccM-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="400" as="sourcePoint" />
+            <mxPoint x="330" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-53" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XYnisLN_ejTITq2cwccM-50" target="XYnisLN_ejTITq2cwccM-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="570" as="sourcePoint" />
+            <mxPoint x="190" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-54" value="patron" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="330" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-55" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.443;entryY=0.043;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.001;exitY=0.638;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="XYnisLN_ejTITq2cwccM-50" target="XYnisLN_ejTITq2cwccM-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-150" y="580" as="sourcePoint" />
+            <mxPoint x="-100" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-56" value="charte informatique" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-57" value="politique de gestion des accès" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-58" value="plan de reprise des activités ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-59" value="politique de sauvegarde des données ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-60" value="stages sensibilisation collaborateurs ? à quelle fréquence ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-61" value="Les employés sont-ils formés régulièrement aux bonnes pratiques de cybersécurité et aux risques (phishing, ransomwares, etc.) ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1710" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-62" value="télétravail autorisé ? usage perso permis ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-63" value="assuré contre risques cyber ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-64" value="procédure de réponse cyber-attaque ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-65" value="stages sensibilisation collaborateurs ? à quelle fréquence ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-66" value="avez-vous une DSI ?" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="330" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-67" value="Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="620" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-68" value="Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin (principe du moindre privilège) ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="760" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-69" value="Avez-vous mis en place une politique de gestion des mots de passe pour les employés ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="900" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-70" value="Avez-vous mis en place du télétravail pour les utilisateurs ? (Oui/Non)&lt;br/&gt;    Si oui -&amp;gt; Le télétravail est-il sécurisé par un VPN pour tous les collaborateurs qui travaillent à distance ? (Oui/Non)&lt;br/&gt;    Si non -v" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1040" width="120" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-71" value="Avez-vous une procédure de gestion des accès lors du départ d&#39;un collaborateur (désactivation des comptes, récupération des équipements) ? (Oui/Non)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1860" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-72" value=" Sécurisation des équipements et des accès" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-73" value="Prévention des risques et formation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XYnisLN_ejTITq2cwccM-74" value="Gestion des données sensibles :" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="2060" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
