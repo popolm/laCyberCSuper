@@ -1,0 +1,125 @@
+[
+    {
+        "Question": {
+            "id": 1,
+            "value": "Avez-vous une DSI dans votre entreprise ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Disposer d'une DSI ou d'un référent sécurité est essentiel pour encadrer les pratiques numériques en entreprise. L'organisation à mettre en place doit-être adaptée à vos enjeux."
+    },
+    {
+        "Question": {
+            "id": 2,
+            "value": "Disposez-vous d'une charte informatique signée par vos employés ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "La charte informatique formalise les bonnes pratiques et protège juridiquement l'entreprise. C'est un élément essentiel pour former et engager les collaborateurs."
+    },
+    {
+        "Question": {
+            "id": 3,
+            "value": "Avez-vous une politique de gestion des accès ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "La gestion des accès regroupe toutes les mesures permettant de s'assurer que chacun n'a accès qu'au éléments nécessaires à son poste. Celà permet de limiter l’exposition des données aux seules personnes autorisées."
+    },
+    {
+        "Question": {
+            "id": 4,
+            "value": "Disposez-vous d’un plan de reprise des activités en cas de cyberattaque ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": 
+            "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
+    },
+    {
+        "Question": {
+            "id": 5,
+            "value": "Avez-vous une politique de sauvegarde des données ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Sauvegarder régulièrement les données de l’entreprise est essentiel pour prévenir leur perte ou vol."
+    },
+    {
+        "Question": {
+            "id": 6,
+            "value": "Avez-vous formé vos collaborateurs à la cybersécurité ?"
+        },
+        "Type_rep": "QCU",
+        "Reponse_possibles": {
+            "Choix1": "Oui, au moins une fois par an",
+            "Choix2": "Oui, au moins un fois tous les trois ans",
+            "Choix3": "Jamais"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Une sensibilisation régulière des collaborateurs aux risques cyber réduit les erreurs humaines et renforce la posture de sécurité."
+    },
+    {
+        "Question": {
+            "id": 7,
+            "value": "Le télétravail est-il autorisé dans votre entreprise ?"
+        },
+        "Type_rep": "QCU",
+        "Reponse_possibles": {
+            "Choix1": "Oui, avec une procédure spécifique",
+            "Choix2": "Oui, sans procédure particulière",
+            "Choix3": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": " Le télétravail génère des risques particuliers du fait de l'accès distant aux données. La mise en place de solutions de sécurisation particulières permet de réduire les risques."
+    },
+    {
+        "Question": {
+            "id": 8,
+            "value": "Avez-vous mis en place une procédure de réponse en cas de cyberattaque ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Une procédure claire avec des rôles et responsabilités définies permet de gagner un temps précieux en cas d'incident de cybersécurité."
+    }
+]

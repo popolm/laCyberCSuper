@@ -1,0 +1,243 @@
+Johan
+.m.orange
+Away
+laCyberCSuper
+
+pop’s added Déimos to the group. — 09:56
+pop’s added yoyoo to the group. — 09:57
+yoyoo added Johan to the group. — 09:57
+yoyoo added Amyante to the group. — 09:57
+pop’s — 09:59
+https://www.figma.com/design/aZgnpX2VcscIB4hWcTSnRK/LaCyberCSuper?node-id=0-1&p=f&t=4esleCbGqyYg9G1W-0
+Figma
+LaCyberCSuper
+Created with Figma
+Déimos changed the channel name: laCyberC'estUnPeuSympa — 10:15
+pop’s — 11:01
+Image
+Image
+pop’s — 11:42
+Image
+PanDharma — 12:03
+Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ? (Oui/Non)
+Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ? (Oui/Non)
+Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin (principe du moindre privilège) ? (Oui/Non)
+
+
+ Sécurisation des équipements et des accès :
+Avez-vous mis en place une politique de gestion des mots de passe pour les employés ? (Oui/Non)
+Avez-vous mis en place du télétravail pour les utilisateurs ? (Oui/Non)
+    Si oui -> Le télétravail est-il sécurisé par un VPN pour tous les collaborateurs qui travaillent à distance ? (Oui/Non)
+    Si non -v
+Avez-vous mis en place un système de double authentification (2FA) sur les outils sensibles ? (Oui/Non)
+Les sauvegardes de données sont-elles effectuées régulièrement et stockées dans un lieu sécurisé ? (Oui/Non)
+Les appareils mobiles professionnels (téléphones, tablettes) sont-ils sécurisés (verrouillage, chiffrement) ? (Oui/Non)
+
+
+ Prévention des risques et formation :
+Les employés sont-ils formés régulièrement aux bonnes pratiques de cybersécurité et aux risques (phishing, ransomwares, etc.) ? (Oui/Non)
+Avez-vous une procédure de gestion des accès lors du départ d'un collaborateur (désactivation des comptes, récupération des équipements) ? (Oui/Non)
+Un audit de sécurité est-il réalisé à chaque mise à jour majeure de votre infrastructure ? (Oui/Non)
+Les périphériques (clés USB, disques durs externes) sont-ils sécurisés ou interdits dans l'entreprise ? (Oui/Non)
+
+
+ Gestion des données sensibles :
+Les données sensibles sont-elles chiffrées lorsqu'elles sont stockées ou transmises ? (Oui/Non)
+Les accès aux serveurs et aux données sensibles sont-ils strictement contrôlés et enregistrés ? (Oui/Non)
+Avez-vous mis en place des outils de détection d'intrusions pour prévenir toute activité suspecte sur votre réseau ? (Oui/Non)
+Des tests de pénétration sont-ils effectués pour évaluer la sécurité de vos systèmes ? (Oui/Non)
+
+
+Mise en situation 1 :
+En tant que DSI, vous recevez une alerte concernant une tentative d'intrusion sur le réseau interne de l'entreprise.
+👉 Que faites-vous ?
+
+a) Je contacte immédiatement les responsables techniques pour analyser l'incident. ✅
+
+b) J'ignore l'alerte car il s'agit probablement d'une fausse alerte. ❌
+
+c) Je préviens les collaborateurs de ne pas se connecter pendant quelques heures. ❌
+
+📝 Mise en situation 2 :
+Vous devez créer un accès temporaire pour un prestataire externe.
+👉 Comment gérez-vous cet accès ?
+
+a) Je donne un accès illimité à tous les fichiers nécessaires. ❌
+
+b) Je définis des droits d'accès limités et prévois une date d’expiration pour cet accès. ✅
+
+c) Je donne l'accès à tout le réseau interne pour que le prestataire puisse travailler plus librement. ❌
+
+
+Avez-vous un responsable désigné pour superviser la cybersécurité dans l'entreprise ? (Oui/Non)
+Amyante — 14:08
+https://fr.freepik.com/vecteurs-premium/logo-forteresse-du-trou-cle_368856709.htm#fromView=search&page=2&position=44&uuid=c3fe4434-c894-4f84-8970-6048a1186a89&query=Logo+Design+cadenas
+https://fr.freepik.com/vecteurs-libre/bouclier-gradient-logo-design-logo-illustration_42162177.htm#fromView=search&page=1&position=2&uuid=c3fe4434-c894-4f84-8970-6048a1186a89&query=Logo+Design+cadenas
+deux suggestions de logos sympas
+pop’s — 14:08
+on verra les logos après ^^ 🙃
+l'inconvénient la dedans c'est qu'on ne peut pas modifier le texte et les couleurs étant donné que c'est une image
+Amyante — 14:09
+yes c'est ceux que j'avais déjà trouvés, c'était avant de passer à ma nouvelle mission 😊
+il y a Gimp pour ça, ça se fait facilement 😊
+Déimos — 14:13
+Vous avez la même pp faut arrêter
+pop’s — 14:13
+omg oui
+la folie
+Amyante — 14:14
+CyberSlothcurity
+Déimos — 14:22
+Image
+pop’s changed the channel name: laCyberC — 15:14
+pop’s changed the channel name: laCyberCSuper — 15:14
+Amyante — 15:21
+https://drive.google.com/file/d/1hTe8KhyhsrKVt5_dpBZUK_xxvgZZJj4w/view?usp=drive_link
+Johan — 15:40
+{
+    "Question" : {
+        "id" : 1,
+        "value" : "Votre mot de passe contient-t-il ?"
+    },
+    "Type_rep" : {
+        "QCM"
+    },
+    "Reponse_possibles" : {
+        "Choix1" : "Minuscules",
+        "Choix2" : "Majuscules",
+        "Choix3" : "Chiffres",
+        "Choix4" : "Caractères spéciaux",
+        "Choix5" : "Au moins 12 caractères"
+    },
+    "Conseil" : {}
+}
+pop’s — 15:48
+[
+    {
+        "Question": {
+            "id": 1,
+            "value": "Avez-vous une DSI dans votre entreprise ?"
+        },
+Expand
+questionnaire_patron.json
+4 KB
+[
+    {
+        "Question": {
+            "id": 1,
+            "value": "Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ?"
+        },
+Expand
+questionnaire_dsi.json
+4 KB
+[
+    {
+        "Question": {
+            "id": 1,
+            "value": "Votre mot de passe contient-il des caractères variés ?"
+        },
+Expand
+questionnaire_cybersecurite.json
+5 KB
+﻿
+[
+    {
+        "Question": {
+            "id": 1,
+            "value": "Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "Un plan de réponse aux incidents permet de réagir rapidement et efficacement en cas de cyberattaque."
+    },
+    {
+        "Question": {
+            "id": 2,
+            "value": "Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "Des audits réguliers permettent de prévenir les failles de sécurité avant qu'elles ne soient exploitées."
+    },
+    {
+        "Question": {
+            "id": 3,
+            "value": "Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "Le principe du moindre privilège doit être appliqué pour minimiser les risques."
+    },
+    {
+        "Question": {
+            "id": 4,
+            "value": "Avez-vous mis en place une politique de gestion des mots de passe pour les employés ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "Une politique stricte sur les mots de passe garantit une meilleure hygiène de sécurité."
+    },
+    {
+        "Question": {
+            "id": 5,
+            "value": "Le télétravail est-il sécurisé pour les collaborateurs travaillant à distance ?"
+        },
+        "Type_rep": "QCU",
+        "Reponse_possibles": {
+            "Choix1": "Oui, avec VPN et équipements sécurisés",
+            "Choix2": "Partiellement, selon les équipes",
+            "Choix3": "Non, aucun dispositif en place"
+        },
+        "Conseil": "Fournir un environnement sécurisé aux télétravailleurs est essentiel pour protéger les données de l’entreprise."
+    },
+    {
+        "Question": {
+            "id": 6,
+            "value": "Avez-vous mis en place un système de double authentification (2FA) sur les outils sensibles ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "La double authentification est une mesure essentielle pour protéger les comptes sensibles."
+    },
+    {
+        "Question": {
+            "id": 7,
+            "value": "Les sauvegardes de données sont-elles effectuées régulièrement et stockées dans un lieu sécurisé ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "Des sauvegardes fréquentes et sécurisées garantissent la continuité d'activité après un incident."
+    },
+    {
+        "Question": {
+            "id": 8,
+            "value": "Les appareils mobiles professionnels (téléphones, tablettes) sont-ils sécurisés (chiffrement, MDM) ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Conseil": "Protégez tous les appareils mobiles via des politiques de sécurité et des outils de gestion adaptés."
+    }
+]
+questionnaire_dsi.json
+4 KB
