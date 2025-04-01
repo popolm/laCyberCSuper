@@ -16,11 +16,31 @@
     </header>
 
     <div class="cta">
-      <p>Quel type de Professionnel êtes-vous ?</p>
+      <div id="insert"><p>Quel type de professionnel êtes-vous ?</p>
+        <div class=" flex flex-col items-center p-[1rem]">
+            <div>
+            <div class="flex gap-[1rem]">
+                <input type="checkbox" id="input1">
+                <label>Chef d'entreprise</label>
+            </div>
+            <div class="flex gap-[1rem]">
+                <input type="checkbox" id="input2">
+                <label>Collaborateur</label>
+            </div>
+            <div class="flex gap-[1rem]">
+                <input type="checkbox" id="input3">
+                <label>D.S.I.</label>
+            </div>
+            <div>
+        </div></div>
+      <button class="bg-white" type="submit" onclick="getInput()">
+        Suivant
+      </button>
     </div>
 
     <footer class="footer">
       &copy; 2025 SécuriCheck - Tous droits réservés
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
