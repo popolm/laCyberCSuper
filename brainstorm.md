@@ -53,3 +53,4 @@
 - chèvres
 - màj régulières
 - télétravail : vpn
+- tableau temps craquage mdp
