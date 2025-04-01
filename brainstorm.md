@@ -4,10 +4,13 @@
 
 - votre mdp contient-il :
 
+  - des majuscules ET des minuscules
   - des caractères spéciaux ?
   - plus de 8 caractères ?
 
 - avez-vous mis en place la double authentification ?
+
+""
 
 - votre mdp est-il sur un post-it quelque part dans votre bureau ?
 - l'avez-vous partagé à un collègue ?
