@@ -1,0 +1,23 @@
+{
+  "name": "la-cyber-c-super",
+  "version": "1.0.0",
+  "description": "Audit de cybersécurité professionnel",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "build:css": "tailwindcss -i ./front/style.css -o ./front/dist/style.css --watch"
+  },
+  "keywords": [
+    "cybersécurité",
+    "audit",
+    "pentest",
+    "rgpd",
+    "iso27001"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "live-server": "^1.2.2"
+  }
+}
