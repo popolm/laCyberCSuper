@@ -1,19 +1,24 @@
 // GLOBAL SCOPE
 
+// import dataUser from ("../back/dataUser.json");
+
+// const dataUser = require("../back/dataUser.json");
+// const dataDSI = require("../back/dataDSI.json");
+// const dataPatron = require("../back/dataPatron.json");
+const result = require("../back/result.json");
 let question;
+let answer=[];
+let result;
 let choixProfil;
 let idQuestion = 0;
-
-const dataUser = require("../back/dataUser.json");
-const dataDSI = require("../back/dataDSI.json");
-const dataPatron = require("../back/dataPatron.json");
-const result = require("../back/result.json");
-
 const user = {
   id: 2,
 };
 
-console.log(dataUser);
+const { readFileSync } = require("fs");
+
+const dataUser = readFileSync("../back/dataUser.json");
+console.log(JSON.parse(dataUser));
 
 // END GLOBAL SCOPE
 
@@ -53,51 +58,49 @@ function getQuestion(choixProfil, idQuestion) {
 function getInput() {
   if (document.getElementById("input1") !== null) {
     input1 = document.getElementById("input1");
+    answer.push(input1);
   } else {
-    input1 = 0;
+    input1 = null;
   }
   if (document.getElementById("input2") !== null) {
-    input2 = document.getElementById("input2");
+    input2 = document.getElementById("input2");   
+    answer.push(input2);
   } else {
-    input2 = 0;
+    input2 = null;
   }
   if (document.getElementById("input3") !== null) {
     input3 = document.getElementById("input3");
+    answer.push(input3);
   } else {
-    input3 = 0;
+    input3 = null;
   }
   if (document.getElementById("input4") !== null) {
     input4 = document.getElementById("input4");
+    answer.push(input4);
   } else {
-    input4 = 0;
+    input4 = null;
   }
   if (document.getElementById("input5") !== null) {
     input5 = document.getElementById("input5");
+    answer.push(input5);
   } else {
-    input5 = 0;
+    input5 = null;
   }
 
-  console.log(input1.checked);
-
-  const data = {
-    1: input1.checked,
-    2: input2.checked,
-    3: input3.checked,
-    4: input4.checked,
-    5: input5.checked,
-  };
-
   // console.log(data);
+
   idQuestion++;
   console.log(idQuestion);
   insertQuestion();
 }
 
 function createJSON() {
+  checkAnswer();
   // for dataUSER questions, if it's right, add to a counter to get to the easy/hard question in the password section
 
   // if answer is wrong, add the advice to the return.json
-  const data = JSON.stringify(user);
+  if(!result)
+  const profil.Conseils[0] = JSON.stringify(user);
   // writing the JSON string content to a file
   result.writeFile("result.json", data, (error) => {
     // throwing the error
@@ -116,5 +119,13 @@ function createJSON() {
 function checkAnswer() {
   // collect answer
   getInput();
+
   // check if it's right
+  // j'ai un doute : est-ce que le [0] ne va pas prendre que le "choix 1" d'un QCM ??
+  if(assert.deepStrictEqual(answer[0], profil.Réponse_attendue[0])){
+    result=true;
+  } else {
+        result=false;
+  }
+  return result;
 }
