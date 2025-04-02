@@ -1,124 +1,198 @@
-[    {
-        "Question": {
-            "id": 1,
-            "value": "Avez-vous une DSI dans votre entreprise ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "Disposer d'une DSI ou d'un référent sécurité est essentiel pour encadrer les pratiques numériques en entreprise. L'organisation à mettre en place doit-être adaptée à vos enjeux."
+[
+  {
+    "Question": {
+      "id": 1,
+      "value": "Avez-vous une DSI dans votre entreprise ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "Question": {
-            "id": 2,
-            "value": "Disposez-vous d'une charte informatique signée par vos employés ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "La charte informatique formalise les bonnes pratiques et protège juridiquement l'entreprise. C'est un élément essentiel pour former et engager les collaborateurs."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "Question": {
-            "id": 3,
-            "value": "Avez-vous une politique de gestion des accès ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "La gestion des accès regroupe toutes les mesures permettant de s'assurer que chacun n'a accès qu'au éléments nécessaires à son poste. Celà permet de limiter l’exposition des données aux seules personnes autorisées."
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
     },
-    {
-        "Question": {
-            "id": 4,
-            "value": "Disposez-vous d’un plan de reprise des activités en cas de cyberattaque ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": 
-            "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
+    "Conseil": "Disposer d'une DSI ou d'un référent sécurité est essentiel pour encadrer les pratiques numériques en entreprise. L'organisation à mettre en place doit-être adaptée à vos enjeux."
+  },
+  {
+    "Question": {
+      "id": 2,
+      "value": "Disposez-vous d'une charte informatique signée par vos employés ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "Question": {
-            "id": 5,
-            "value": "Avez-vous une politique de sauvegarde des données ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "Sauvegarder régulièrement les données de l’entreprise est essentiel pour prévenir leur perte ou vol."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "Question": {
-            "id": 6,
-            "value": "Avez-vous formé vos collaborateurs à la cybersécurité ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Oui, au moins une fois par an",
-            "Choix2": "Oui, au moins un fois tous les trois ans",
-            "Choix3": "Jamais"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "Une sensibilisation régulière des collaborateurs aux risques cyber réduit les erreurs humaines et renforce la posture de sécurité."
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
     },
-    {
-        "Question": {
-            "id": 7,
-            "value": "Le télétravail est-il autorisé dans votre entreprise ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Oui, avec une procédure spécifique",
-            "Choix2": "Oui, sans procédure particulière",
-            "Choix3": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": " Le télétravail génère des risques particuliers du fait de l'accès distant aux données. La mise en place de solutions de sécurisation particulières permet de réduire les risques."
+    "Conseil": "La charte informatique formalise les bonnes pratiques et protège juridiquement l'entreprise. C'est un élément essentiel pour former et engager les collaborateurs."
+  },
+  {
+    "Question": {
+      "id": 3,
+      "value": "Avez-vous formé vos collaborateurs à la cybersécurité ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "Question": {
-            "id": 8,
-            "value": "Avez-vous mis en place une procédure de réponse en cas de cyberattaque ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "Une procédure claire avec des rôles et responsabilités définies permet de gagner un temps précieux en cas d'incident de cybersécurité."
-    }
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui, au moins une fois par an",
+      "Choix2": "Oui, au moins un fois tous les trois ans",
+      "Choix3": "Jamais"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Former régulièrement vos employés réduit les erreurs humaines et renforce la posture de sécurité. Une formation annuelle est idéale."
+  },
+  {
+    "Question": {
+      "id": 4,
+      "value": "Avez-vous une politique de gestion des mots de passe ?",
+      "niveauQuestion": "medium"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui, avec des règles strictes (longueur, complexité, MFA…)",
+      "Choix2": "Oui, mais pas systématiquement appliquée",
+      "Choix3": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Des règles strictes (longueur, complexité, MFA) sont indispensables pour protéger les comptes contre les attaques."
+  },
+  {
+    "Question": {
+      "id": 5,
+      "value": "Avez-vous une politique de gestion des accès ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "La gestion des accès regroupe toutes les mesures permettant de s'assurer que chacun n'a accès qu'au éléments nécessaires à son poste. Celà permet de limiter l’exposition des données aux seules personnes autorisées."
+  },
+  {
+    "Question": {
+      "id": 6,
+      "value": "Disposez-vous d’un plan de reprise des activités en cas de cyberattaque ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
+  },
+  {
+    "Question": {
+      "id": 7,
+      "value": "Votre entreprise impose-t-elle un changement régulier des mots de passe ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui, tous les X mois",
+      "Choix2": "Oui, mais pas strictement appliqué",
+      "Choix3": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Changer régulièrement les mots de passe sensibles renforce la sécurité, mais privilégiez aussi des solutions comme l’authentification multifactorielle (MFA)."
+  },
+  {
+    "Question": {
+      "id": 8,
+      "value": "Savez-vous si votre entreprise utilise un pare-feu ou un antivirus avancé ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Un pare-feu et un antivirus performants sont des barrières essentielles contre les cyberattaques."
+  },
+  {
+    "Question": {
+      "id": 9,
+      "value": "Avez-vous une politique de sauvegarde des données ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Sauvegarder régulièrement les données protège contre la perte ou le vol, appliquez la règle 3-2-1 (3 copies, 2 supports différents, 1 hors ligne)."
+  },
+  {
+    "Question": {
+      "id": 10,
+      "value": "Le télétravail est-il autorisé dans votre entreprise ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui, avec une procédure spécifique",
+      "Choix2": "Oui, sans procédure particulière",
+      "Choix3": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Le télétravail nécessite des mesures de sécurité adaptées comme un VPN, l’authentification forte et des accès restreints aux données."
+  },
+  {
+    "Question": {
+      "id": 11,
+      "value": "Pensez-vous que votre entreprise est une cible potentielle pour une cyberattaque ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Toutes les entreprises sont des cibles, quelle que soit leur taille. Les cybercriminels exploitent les failles des systèmes, des employés ou des partenaires. Anticipez les risques en mettant en place des mesures de protection adaptées."
+  },
+  {
+    "Question": {
+      "id": 12,
+      "value": "Savez-vous comment signaler une cyberattaque dans votre entreprise ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Réponse_attendue": {
+      "isCorrect": ["Choix1"]
+    },
+    "Conseil": "Une réaction rapide est essentielle en cas d’incident. Assurez-vous que tous les employés savent qui contacter et quelles actions mener (ex. DSI, référent cybersécurité, prestataire spécialisé). Un plan de réponse aux incidents bien défini limite les dégâts."
+  }
 ]
