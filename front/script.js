@@ -4,13 +4,10 @@ let question;
 let choixProfil;
 let idQuestion = 0;
 
-const dataDSI = fetch("../back/dataDSI.json");
-const dataPatron = fetch("../dataPatron/dataDSI.json");
-const dataUser = fetch("../back/dataUser.json");
-const dataUser = fetch("../back/dataUser.json");
-const dataDSI = fetch("../back/dataDSI.json");
-const dataPatron = fetch("../back/dataPatron.json");
-const result = fetch("../back/result.json");
+const dataUser = require("../back/dataUser.json");
+const dataDSI = require("../back/dataDSI.json");
+const dataPatron = require("../back/dataPatron.json");
+const result = require("../back/result.json");
 
 const user = {
   id: 2,
