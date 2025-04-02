@@ -1,4 +1,4 @@
-    {
+[    {
         "Question": {
             "id": 1,
             "value": "Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ?"
@@ -95,3 +95,4 @@
         },
         "Conseil": "Protégez tous les appareils mobiles via des politiques de sécurité et des outils de gestion adaptés."
     }
+]
