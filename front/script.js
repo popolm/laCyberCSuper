@@ -1,78 +1,76 @@
 // GLOBAL SCOPE
 
 let question;
-let idQuestion=0;
+let idQuestion = 0;
+let profil;
+let dataUser;
 
-const dataDSI = require("../back/dataDSI.json");
-const dataPatron = require("../dataPatron/dataDSI.json");
-const dataUser = require("../back/dataUser.json");
+fetch("../back/dataUser.json")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    return res.json();
+  })
+  .then((data) => {
+    dataUser = data;
+    profil = data;
+    insertQuestion();
+  })
+  .catch((err) => console.error("Erreur de chargement JSON :", err));
 
-let profil = dataUser;
-
-// END GLOBAL SCOPE
-
-//Faire fonction choix user
-
+// Fonction pour insérer une question dans le DOM
 function insertQuestion() {
-  let nextQuestion = document.getElementById("insert");
+  if (!profil || idQuestion >= profil.length) {
+    console.log("Toutes les questions ont été affichées.");
+    return;
+  }
 
-  nextQuestion.innerHTML = getQuestion(idQuestion);
+  const currentQuestion = profil[idQuestion];
+  const nextQuestion = document.getElementById("insert");
+  nextQuestion.innerHTML = getQuestionHTML(currentQuestion);
 }
-console.log(dataUser);
 
-function getQuestion(profil, Question, id, value) {
-  switch (idQuestion) {
-    case idQuestion:
-      question = ` 
-        
+// Génère le HTML pour une question
+function getQuestionHTML(questionData) {
+  const { Question, Reponse_possibles } = questionData;
+
+  let optionsHTML = "";
+  for (const [key, value] of Object.entries(Reponse_possibles)) {
+    optionsHTML += `
+      <div>
+        <input type="radio" id="${key}" name="${key}" />
+        <label for="${key}">${value}</label>
+      </div>
     `;
-      break;
   }
 
-  return question;
+  return `
+    <h2>${Question.value}</h2>
+    <form>
+      ${optionsHTML}
+      <button type="button" onclick="getInput()">Suivant</button>
+    </form>
+  `;
 }
 
+// Récupère les réponses de l'utilisateur
 function getInput() {
-  if (document.getElementById("input1") !== null) {
-    input1 = document.getElementById("input1");
-  } else {
-    input1 = 0;
-  }
-  if (document.getElementById("input2") !== null) {
-    input2 = document.getElementById("input2");
-  } else {
-    input2 = 0;
-  }
-  if (document.getElementById("input3") !== null) {
-    input3 = document.getElementById("input3");
-  } else {
-    input3 = 0;
-  }
-  if (document.getElementById("input4") !== null) {
-    input4 = document.getElementById("input4");
-  } else {
-    input4 = 0;
-  }
-  if (document.getElementById("input5") !== null) {
-    input5 = document.getElementById("input5");
-  } else {
-    input5 = 0;
+  const currentQuestion = profil[idQuestion];
+  const { Reponse_possibles } = currentQuestion;
+
+  const userResponses = {};
+  for (const key of Object.keys(Reponse_possibles)) {
+    const input = document.getElementById(key);
+    userResponses[key] = input ? input.checked : false;
   }
 
-  console.log(input1.checked);
+  console.log("Réponses utilisateur :", userResponses);
 
-  const data = {
-    1: input1.checked,
-    2: input2.checked,
-    3: input3.checked,
-    4: input4.checked,
-    5: input5.checked,
-  };
-
-  // console.log(data);
   idQuestion++;
-  console.log(idQuestion);
-  insertQuestion();
+  insertQuestion(); // Passe à la question suivante
 }
 
-function createJSON() {}
+function createJSON() {
+  // Fonction à implémenter pour générer un JSON basé sur les réponses utilisateur
+}

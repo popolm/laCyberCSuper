@@ -4,41 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="icon" type="image/vnd.icon" href="/src/img/favicon.ico">
+    <link rel="icon" type="image/vnd.icon" href="/src/img/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SécuriCheck</title>
   </head>
   <body>
     <header class="flex items-center">
       <div class="logo w-[8rem] h-[8rem]">
-        <img src="src/img/logo_blanc.png" alt="logo" />
+        <a href="/front/"><img src="src/img/logo_blanc.png" alt="logo" /></a>
       </div>
       <h1>Questionnaire</h1>
     </header>
 
     <div class="cta">
       <div id="insert">
-        <p>Quel type de professionnel êtes-vous ?</p>
-        <div class=" flex flex-col items-center p-[1rem]">
+        <p id="question-text">Quel type de professionnel êtes-vous ?</p>
+        <div class="flex flex-col items-center p-[1rem]">
           <div>
             <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input1">
-                <label>Chef d'entreprise</label>
+              <input type="radio" id="input1" name="profession" />
+              <label for="input1">Chef d'entreprise</label>
             </div>
             <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input2">
-                <label>Collaborateur</label>
+              <input type="radio" id="input2" name="profession" />
+              <label for="input2">Collaborateur</label>
             </div>
             <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input3">
-                <label>D.S.I.</label>
+              <input type="radio" id="input3" name="profession" />
+              <label for="input3">D.S.I.</label>
             </div>
           </div>
+        </div>
       </div>
-      </div>
-      <button class="bg-white" type="submit" onclick="getInput()">
-        Suivant
-      </button>
     </div>
     <footer class="footer">
       &copy; 2025 SécuriCheck - Tous droits réservés
