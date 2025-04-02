@@ -2,7 +2,7 @@
 
 let question;
 let choixProfil;
-let idQuestion=0;
+let idQuestion = 0;
 
 const dataDSI = fetch("../back/dataDSI.json");
 const dataPatron = fetch("../dataPatron/dataDSI.json");
@@ -12,18 +12,17 @@ console.log(dataUser);
 
 // END GLOBAL SCOPE
 
-
 //Choix du profil
-function selectUser(profil){
-  switch(profil){
-    case 1 :
-      profil=dataDSI;
+function selectUser(profil) {
+  switch (profil) {
+    case 1:
+      profil = dataDSI;
       break;
-    case 2 :
-      profil=dataPatron;
+    case 2:
+      profil = dataPatron;
       break;
-    case 3 :
-      profil=dataUser;
+    case 3:
+      profil = dataUser;
       break;
   }
 }
@@ -34,15 +33,12 @@ function insertQuestion() {
   nextQuestion.innerHTML = getQuestion(idQuestion);
 }
 
-
 function getQuestion(choixProfil, idQuestion) {
   selectUser(data);
 
   switch (idQuestion) {
     case idQuestion:
-      question = dataUser.stringify("Question")
-        
-    ;
+      question = dataUser.stringify("Question");
       break;
   }
 
