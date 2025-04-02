@@ -1,15 +1,38 @@
 // GLOBAL SCOPE
 
 let question;
+let choixProfil;
 let idQuestion=0;
 
-const dataDSI = require("../back/dataDSI.json");
-const dataPatron = require("../dataPatron/dataDSI.json");
-const dataUser = require("../back/dataUser.json");
+const dataDSI = fetch("../back/dataDSI.json");
+const dataPatron = fetch("../dataPatron/dataDSI.json");
+const dataUser = fetch("../back/dataUser.json");
 
-let profil = dataUser;
+console.log(dataDSI);
 
 // END GLOBAL SCOPE
+
+fetch('../back/dataDSI.json')  // Utilisez le chemin correct vers votre fichier
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+    return response.json();  // Convertit la réponse en objet JavaScript
+  })
+  .then(donneesJSON => {
+    // Stockez les données dans une variable
+    const mesData = donneesJSON;
+    
+    // Affichez les données dans la console
+    console.log("Données JSON chargées :", mesData);
+    
+    // À partir d'ici, vous pouvez utiliser la variable mesData comme vous le souhaitez
+    // Par exemple, accéder à une propriété spécifique :
+    // console.log(mesData.proprieteSpecifique);
+  })
+  .catch(erreur => {
+    console.error("Erreur lors du chargement du JSON :", erreur);
+  });
 
 //Faire fonction choix user
 
@@ -18,14 +41,23 @@ function insertQuestion() {
 
   nextQuestion.innerHTML = getQuestion(idQuestion);
 }
-console.log(dataUser);
 
-function getQuestion(profil, Question, id, value) {
+
+function getQuestion(choixProfil, idQuestion) {
+  switch(profil){
+    case 1 :
+      profil=dataDSI;
+    case 2 :
+      profil=dataPatron;
+    case 3 :
+      profil=dataUser;
+  }
+
   switch (idQuestion) {
     case idQuestion:
-      question = ` 
+      question = dataUser.stringify("Question")
         
-    `;
+    ;
       break;
   }
 

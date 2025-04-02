@@ -1,4 +1,3 @@
-[
   {
     "Question": {
       "id": 1,
@@ -149,4 +148,3 @@
     },
     "Conseil": "L'hameçonnage (ou phishing en anglais) désigne une technique frauduleuse qui consiste à usurper l’identité d’un organisme connu (banque, opérateurs, etc) ou d’un proche pour récupérer des informations. Quelques règles simples permettent de l'éviter. Ne cliquez jamais sur un lien ou une pièce jointe qui vous semblent douteux. En cas de suspicion, passez la souris sur le lien pour voir apparaître l'adresse vers laquelle il dirige et appréciez sa légitimité. Ne répondez jamais à un mail suspect. Au moindre doute, contactez l'expéditeur par un autre canal. Vérifiez les paramètres de sécurité de votre compte de messagerie. Si le fournisseur de messagerie le permet, activez la double authentification pour sécuriser vos accès."
   }
-]
