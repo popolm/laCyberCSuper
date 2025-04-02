@@ -1,6 +1,6 @@
 [
     {
-        "Question": {
+        "QuestionBase": {
             "id": 1,
             "value": "Avez-vous une DSI dans votre entreprise ?"
         },
@@ -15,7 +15,7 @@
         "Conseil": "Disposer d'une DSI ou d'un référent sécurité est essentiel pour encadrer les pratiques numériques en entreprise. L'organisation à mettre en place doit-être adaptée à vos enjeux."
     },
     {
-        "Question": {
+        "QuestionBase": {
             "id": 2,
             "value": "Disposez-vous d'une charte informatique signée par vos employés ?"
         },
@@ -30,7 +30,7 @@
         "Conseil": "La charte informatique formalise les bonnes pratiques et protège juridiquement l'entreprise. C'est un élément essentiel pour former et engager les collaborateurs."
     },
     {
-        "Question": {
+        "QuestionAvancee": {
             "id": 3,
             "value": "Avez-vous une politique de gestion des accès ?"
         },
@@ -45,7 +45,7 @@
         "Conseil": "La gestion des accès regroupe toutes les mesures permettant de s'assurer que chacun n'a accès qu'au éléments nécessaires à son poste. Celà permet de limiter l’exposition des données aux seules personnes autorisées."
     },
     {
-        "Question": {
+        "QuestionAvancee": {
             "id": 4,
             "value": "Disposez-vous d’un plan de reprise des activités en cas de cyberattaque ?"
         },
@@ -61,7 +61,7 @@
             "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
     },
     {
-        "Question": {
+        "QuestionSimple": {
             "id": 5,
             "value": "Avez-vous une politique de sauvegarde des données ?"
         },
@@ -76,7 +76,7 @@
         "Conseil": "Sauvegarder régulièrement les données de l’entreprise est essentiel pour prévenir leur perte ou vol."
     },
     {
-        "Question": {
+        "QuestionBase": {
             "id": 6,
             "value": "Avez-vous formé vos collaborateurs à la cybersécurité ?"
         },
@@ -92,7 +92,7 @@
         "Conseil": "Une sensibilisation régulière des collaborateurs aux risques cyber réduit les erreurs humaines et renforce la posture de sécurité."
     },
     {
-        "Question": {
+        "QuestionSimple": {
             "id": 7,
             "value": "Le télétravail est-il autorisé dans votre entreprise ?"
         },
@@ -106,20 +106,5 @@
             "isCorrect": ["Choix1"]
         },
         "Conseil": " Le télétravail génère des risques particuliers du fait de l'accès distant aux données. La mise en place de solutions de sécurisation particulières permet de réduire les risques."
-    },
-    {
-        "Question": {
-            "id": 8,
-            "value": "Avez-vous mis en place une procédure de réponse en cas de cyberattaque ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "Une procédure claire avec des rôles et responsabilités définies permet de gagner un temps précieux en cas d'incident de cybersécurité."
     }
 ]
