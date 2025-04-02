@@ -1,6 +1,12 @@
 // GLOBAL SCOPE
 
 let question;
+var dataDSI = require("../back/dataDSI.json");
+var dataPatron = require("../dataPatron/dataDSI.json");
+var dataUser = require("../back/dataUser.json");
+var result = require("../back/result.json");
+
+console.log(dataPatron);
 
 // END GLOBAL SCOPE
 

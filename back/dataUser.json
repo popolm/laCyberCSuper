@@ -15,7 +15,7 @@
     "Réponse_attendue": {
       "isCorrect": ["Choix1", "Choix2", "Choix3", "Choix4", "Choix5"]
     },
-    "Conseil": "Il est admis qu'un bon mot de passe doit comporter au minimum 12 signes mélangeant des majuscules, des minuscules, des chiffres et des caractères spéciaux. Évitez d’employer dans vos mots de passe des informations personnelles qui pourraient être faciles à retrouver (sur les réseaux sociaux par exemple), comme le prénom de votre enfant, une date anniversaire ou votre groupe de musique préféré.."
+    "Conseil": "Il est admis qu'un bon mot de passe doit comporter au minimum 12 signes mélangeant des majuscules, des minuscules, des chiffres et des caractères spéciaux. Évitez d’employer dans vos mots de passe des informations personnelles qui pourraient être faciles à retrouver (sur les réseaux sociaux par exemple), comme le prénom de votre enfant, une date anniversaire ou votre groupe de musique préféré."
   },
   {
     "Question": {
