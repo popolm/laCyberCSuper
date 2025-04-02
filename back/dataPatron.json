@@ -155,5 +155,35 @@
             "isCorrect": ["Choix1"]
         },
         "Conseil": "Le télétravail nécessite des mesures de sécurité adaptées comme un VPN, l’authentification forte et des accès restreints aux données."
+    },
+    {
+        "QuestionSimple": {
+            "id": 11,
+            "value": "Pensez-vous que votre entreprise est une cible potentielle pour une cyberattaque ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Toutes les entreprises sont des cibles, quelle que soit leur taille. Les cybercriminels exploitent les failles des systèmes, des employés ou des partenaires. Anticipez les risques en mettant en place des mesures de protection adaptées."
+    },
+    {
+        "QuestionSimple": {
+            "id": 12,
+            "value": "Savez-vous comment signaler une cyberattaque dans votre entreprise ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Une réaction rapide est essentielle en cas d’incident. Assurez-vous que tous les employés savent qui contacter et quelles actions mener (ex. DSI, référent cybersécurité, prestataire spécialisé). Un plan de réponse aux incidents bien défini limite les dégâts."
     }
 ]
