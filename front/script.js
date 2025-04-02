@@ -1,103 +1,147 @@
 // GLOBAL SCOPE
 
 let question;
-let choixProfil;
-let idQuestion=0;
+let idQuestion = 0;
+let profil;
+let dataUser;
 
-// const dataDSI = require("../back/dataDSI.json");
-// const dataPatron = require("../dataPatron/dataDSI.json");
-// const dataUser = require("../back/dataUser.json");
-const fs = require('fs');
-try {
-  // Ajustez le chemin selon votre structure de dossiers
-  const fichierJSON = fs.readFileSync('../back/dataUser.json', 'utf8');
-  const mesData = JSON.parse(fichierJSON);
-  console.log("Données JSON chargées :", mesData);
-} catch (erreur) {
-  console.error("Erreur lors du chargement du JSON :", erreur);
+// Fonction pour afficher la question sur la profession
+function displayProfessionQuestion() {
+  const insertElement = document.getElementById("insert");
+  insertElement.innerHTML = `
+    <p id="question-text">Quel type de professionnel êtes-vous ?</p>
+    <div class="flex flex-col items-center p-[1rem]">
+      <div>
+        <div class="flex gap-[1rem]">
+          <input type="radio" id="input1" name="profession" />
+          <label for="input1">Chef d'entreprise</label>
+        </div>
+        <div class="flex gap-[1rem]">
+          <input type="radio" id="input2" name="profession" />
+          <label for="input2">Collaborateur</label>
+        </div>
+        <div class="flex gap-[1rem]">
+          <input type="radio" id="input3" name="profession" />
+          <label for="input3">D.S.I.</label>
+        </div>
+      </div>
+    </div>
+    <button type="button" onclick="location.href='index.html'">Retour</button>
+    <button type="button" onclick="startQuestionnaire()">Commencer</button>
+
+  `;
 }
 
-
-// END GLOBAL SCOPE
-
-
-//Choix du profil
-function selectUser(profil){
-  switch(profil){
-    case 1 :
-      profil=dataDSI;
+// Fonction pour charger les questions en fonction du type de professionnel
+function loadQuestions(profession) {
+  let filePath;
+  switch (profession) {
+    case "Collaborateur":
+      filePath = "../back/dataUser.json";
       break;
-    case 2 :
-      profil=dataPatron;
+    case "D.S.I.":
+      filePath = "../back/dataDSI.json";
       break;
-    case 3 :
-      profil=dataUser;
+    case "Chef d'entreprise":
+      filePath = "../back/dataPatron.json";
       break;
+    default:
+      console.error("Profession non reconnue !");
+      return;
   }
+
+  fetch(filePath)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.json();
+    })
+    .then((data) => {
+      dataUser = data;
+      profil = data;
+      idQuestion = 0; // Réinitialise l'index des questions
+      insertQuestion();
+    })
+    .catch((err) => console.error("Erreur de chargement JSON :", err));
 }
 
+// Fonction pour insérer une question dans le DOM
 function insertQuestion() {
-  let nextQuestion = document.getElementById("insert");
-
-  nextQuestion.innerHTML = getQuestion(idQuestion);
-}
-
-
-function getQuestion(choixProfil, idQuestion) {
-  selectUser(data);
-
-  switch (idQuestion) {
-    case idQuestion:
-      question = dataUser.stringify("Question")
-        
-    ;
-      break;
+  if (!profil || idQuestion >= profil.length) {
+    console.log("Toutes les questions ont été affichées.");
+    return;
   }
 
-  return question;
+  const currentQuestion = profil[idQuestion];
+  const nextQuestion = document.getElementById("insert");
+  nextQuestion.innerHTML = getQuestionHTML(currentQuestion);
 }
 
+// Génère le HTML pour une question
+function getQuestionHTML(questionData) {
+  const { Question, Reponse_possibles, Type_rep } = questionData;
+
+  let typeQuestion;
+  if (Type_rep === "QCM") {
+    typeQuestion = "checkbox";
+  } else if (Type_rep === "QCU") {
+    typeQuestion = "radio";
+  } else {
+    console.error("Type de question non reconnu !");
+    return `<p>Erreur : Type de question non reconnu.</p>`;
+  }
+
+  let optionsHTML = "";
+  for (const [key, value] of Object.entries(Reponse_possibles)) {
+    optionsHTML += `
+      <div>
+        <input type="${typeQuestion}" id="${key}" name="response" />
+        <label for="${key}">${value}</label>
+      </div>
+    `;
+  }
+
+  return `
+  <div class="flex flex-col items-center p-[1rem]">
+    <button type="button" onclick="location.href='index.html'">Retour à l'accueil</button>
+    <h2>${Question.value}</h2>
+    <form>
+      ${optionsHTML}
+      <button type="button" onclick="getInput()">Suivant</button>
+    </form>
+  </div>
+  `;
+}
+
+// Récupère les réponses de l'utilisateur
 function getInput() {
-  if (document.getElementById("input1") !== null) {
-    input1 = document.getElementById("input1");
-  } else {
-    input1 = 0;
-  }
-  if (document.getElementById("input2") !== null) {
-    input2 = document.getElementById("input2");
-  } else {
-    input2 = 0;
-  }
-  if (document.getElementById("input3") !== null) {
-    input3 = document.getElementById("input3");
-  } else {
-    input3 = 0;
-  }
-  if (document.getElementById("input4") !== null) {
-    input4 = document.getElementById("input4");
-  } else {
-    input4 = 0;
-  }
-  if (document.getElementById("input5") !== null) {
-    input5 = document.getElementById("input5");
-  } else {
-    input5 = 0;
+  const currentQuestion = profil[idQuestion];
+  const { Reponse_possibles } = currentQuestion;
+
+  const userResponses = {};
+  for (const key of Object.keys(Reponse_possibles)) {
+    const input = document.getElementById(key);
+    userResponses[key] = input ? input.checked : false;
   }
 
-  console.log(input1.checked);
+  console.log("Réponses utilisateur :", userResponses);
 
-  const data = {
-    1: input1.checked,
-    2: input2.checked,
-    3: input3.checked,
-    4: input4.checked,
-    5: input5.checked,
-  };
-
-  // console.log(data);
   idQuestion++;
-  console.log(idQuestion);
-  insertQuestion();
+  insertQuestion(); // Passe à la question suivante
 }
 
-function createJSON() {}
+// Fonction appelée pour démarrer le questionnaire en fonction de la sélection
+function startQuestionnaire() {
+  const selectedProfession = document.querySelector(
+    'input[name="profession"]:checked'
+  );
+  if (selectedProfession) {
+    loadQuestions(selectedProfession.nextElementSibling.textContent.trim());
+  } else {
+    alert("Veuillez sélectionner un type de professionnel !");
+  }
+}
+
+// Affiche la question sur la profession au chargement de la page
+document.addEventListener("DOMContentLoaded", displayProfessionQuestion);

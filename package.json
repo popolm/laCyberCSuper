@@ -4,8 +4,8 @@
   "description": "Audit de cybersécurité professionnel",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --port=8080 --open=front/",
-    "build:css": "tailwindcss -i ./style.css -o ./dist/style.css --watch"
+    "start": "live-server --open=front",
+    "build:css": "tailwindcss -i ./front/style.css -o ./front/dist/style.css --watch"
   },
   "keywords": [
     "cybersécurité",
