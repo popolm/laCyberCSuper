@@ -4,11 +4,19 @@ let question;
 let choixProfil;
 let idQuestion=0;
 
-const dataDSI = fetch("../back/dataDSI.json");
-const dataPatron = fetch("../dataPatron/dataDSI.json");
-const dataUser = fetch("../back/dataUser.json");
+// const dataDSI = require("../back/dataDSI.json");
+// const dataPatron = require("../dataPatron/dataDSI.json");
+// const dataUser = require("../back/dataUser.json");
+const fs = require('fs');
+try {
+  // Ajustez le chemin selon votre structure de dossiers
+  const fichierJSON = fs.readFileSync('../back/dataUser.json', 'utf8');
+  const mesData = JSON.parse(fichierJSON);
+  console.log("Données JSON chargées :", mesData);
+} catch (erreur) {
+  console.error("Erreur lors du chargement du JSON :", erreur);
+}
 
-console.log(dataUser);
 
 // END GLOBAL SCOPE
 
