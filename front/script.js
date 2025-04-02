@@ -7,6 +7,14 @@ let idQuestion = 0;
 const dataDSI = fetch("../back/dataDSI.json");
 const dataPatron = fetch("../dataPatron/dataDSI.json");
 const dataUser = fetch("../back/dataUser.json");
+const dataUser = fetch("../back/dataUser.json");
+const dataDSI = fetch("../back/dataDSI.json");
+const dataPatron = fetch("../back/dataPatron.json");
+const result = fetch("../back/result.json");
+
+const user = {
+  id: 2,
+};
 
 console.log(dataUser);
 
@@ -88,4 +96,28 @@ function getInput() {
   insertQuestion();
 }
 
-function createJSON() {}
+function createJSON() {
+  // for dataUSER questions, if it's right, add to a counter to get to the easy/hard question in the password section
+
+  // if answer is wrong, add the advice to the return.json
+  const data = JSON.stringify(user);
+  // writing the JSON string content to a file
+  result.writeFile("result.json", data, (error) => {
+    // throwing the error
+    // in case of a writing problem
+    if (error) {
+      // logging the error
+      console.error(error);
+
+      throw error;
+    }
+
+    console.log("data.json written correctly");
+  });
+}
+
+function checkAnswer() {
+  // collect answer
+  getInput();
+  // check if it's right
+}

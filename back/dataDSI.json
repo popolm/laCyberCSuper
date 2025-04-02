@@ -1,98 +1,99 @@
-[    {
-        "Question": {
-            "id": 1,
-            "value": "Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Un plan de réponse aux incidents permet de réagir rapidement et efficacement en cas de cyberattaque."
+[
+  {
+    "Question": {
+      "id": 1,
+      "value": "Avez-vous un plan de gestion des incidents de sécurité (plan de réponse aux incidents) en place ?"
     },
-    {
-        "Question": {
-            "id": 2,
-            "value": "Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Des audits réguliers permettent de prévenir les failles de sécurité avant qu'elles ne soient exploitées."
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "Question": {
-            "id": 3,
-            "value": "Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Le principe du moindre privilège doit être appliqué pour minimiser les risques."
+    "Conseil": "Un plan de réponse aux incidents permet de réagir rapidement et efficacement en cas de cyberattaque."
+  },
+  {
+    "Question": {
+      "id": 2,
+      "value": "Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ?"
     },
-    {
-        "Question": {
-            "id": 4,
-            "value": "Avez-vous mis en place une politique de gestion des mots de passe pour les employés ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Une politique stricte sur les mots de passe garantit une meilleure hygiène de sécurité."
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "Question": {
-            "id": 5,
-            "value": "Le télétravail est-il sécurisé pour les collaborateurs travaillant à distance ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Oui, avec VPN et équipements sécurisés",
-            "Choix2": "Partiellement, selon les équipes",
-            "Choix3": "Non, aucun dispositif en place"
-        },
-        "Conseil": "Fournir un environnement sécurisé aux télétravailleurs est essentiel pour protéger les données de l’entreprise."
+    "Conseil": "Des audits réguliers permettent de prévenir les failles de sécurité avant qu'elles ne soient exploitées."
+  },
+  {
+    "Question": {
+      "id": 3,
+      "value": "Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin ?"
     },
-    {
-        "Question": {
-            "id": 6,
-            "value": "Avez-vous mis en place un système de double authentification (2FA) sur les outils sensibles ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "La double authentification est une mesure essentielle pour protéger les comptes sensibles."
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "Question": {
-            "id": 7,
-            "value": "Les sauvegardes de données sont-elles effectuées régulièrement et stockées dans un lieu sécurisé ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Des sauvegardes fréquentes et sécurisées garantissent la continuité d'activité après un incident."
+    "Conseil": "Le principe du moindre privilège doit être appliqué pour minimiser les risques."
+  },
+  {
+    "Question": {
+      "id": 4,
+      "value": "Avez-vous mis en place une politique de gestion des mots de passe pour les employés ?"
     },
-    {
-        "Question": {
-            "id": 8,
-            "value": "Les appareils mobiles professionnels (téléphones, tablettes) sont-ils sécurisés (chiffrement, MDM) ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Protégez tous les appareils mobiles via des politiques de sécurité et des outils de gestion adaptés."
-    }
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Une politique stricte sur les mots de passe garantit une meilleure hygiène de sécurité."
+  },
+  {
+    "Question": {
+      "id": 5,
+      "value": "Le télétravail est-il sécurisé pour les collaborateurs travaillant à distance ?"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui, avec VPN et équipements sécurisés",
+      "Choix2": "Partiellement, selon les équipes",
+      "Choix3": "Non, aucun dispositif en place"
+    },
+    "Conseil": "Fournir un environnement sécurisé aux télétravailleurs est essentiel pour protéger les données de l’entreprise."
+  },
+  {
+    "Question": {
+      "id": 6,
+      "value": "Avez-vous mis en place un système de double authentification (2FA) sur les outils sensibles ?"
+    },
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "La double authentification est une mesure essentielle pour protéger les comptes sensibles."
+  },
+  {
+    "Question": {
+      "id": 7,
+      "value": "Les sauvegardes de données sont-elles effectuées régulièrement et stockées dans un lieu sécurisé ?"
+    },
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Des sauvegardes fréquentes et sécurisées garantissent la continuité d'activité après un incident."
+  },
+  {
+    "Question": {
+      "id": 8,
+      "value": "Les appareils mobiles professionnels (téléphones, tablettes) sont-ils sécurisés (chiffrement, MDM) ?"
+    },
+    "Type_rep": "Booléen",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Protégez tous les appareils mobiles via des politiques de sécurité et des outils de gestion adaptés."
+  }
 ]
