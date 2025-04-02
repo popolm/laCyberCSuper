@@ -30,54 +30,8 @@
         "Conseil": "La charte informatique formalise les bonnes pratiques et protège juridiquement l'entreprise. C'est un élément essentiel pour former et engager les collaborateurs."
     },
     {
-        "QuestionAvancee": {
-            "id": 3,
-            "value": "Avez-vous une politique de gestion des accès ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "La gestion des accès regroupe toutes les mesures permettant de s'assurer que chacun n'a accès qu'au éléments nécessaires à son poste. Celà permet de limiter l’exposition des données aux seules personnes autorisées."
-    },
-    {
-        "QuestionAvancee": {
-            "id": 4,
-            "value": "Disposez-vous d’un plan de reprise des activités en cas de cyberattaque ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": 
-            "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
-    },
-    {
-        "QuestionSimple": {
-            "id": 5,
-            "value": "Avez-vous une politique de sauvegarde des données ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Réponse_attendue": {
-            "isCorrect": ["Choix1"]
-        },
-        "Conseil": "Sauvegarder régulièrement les données de l’entreprise est essentiel pour prévenir leur perte ou vol."
-    },
-    {
         "QuestionBase": {
-            "id": 6,
+            "id": 3,
             "value": "Avez-vous formé vos collaborateurs à la cybersécurité ?"
         },
         "Type_rep": "QCU",
@@ -92,8 +46,103 @@
         "Conseil": "Une sensibilisation régulière des collaborateurs aux risques cyber réduit les erreurs humaines et renforce la posture de sécurité."
     },
     {
-        "QuestionSimple": {
+        "QuestionBase": {
+            "id": 4,
+            "value": "Avez-vous une politique de gestion des mots de passe ?"
+        },
+        "Type_rep": "QCU",
+        "Reponse_possibles": {
+            "Choix1": "Oui, avec des règles strictes (longueur, complexité, MFA…)",
+            "Choix2": "Oui, mais pas systématiquement appliquée",
+            "Choix3": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Une sensibilisation régulière des collaborateurs aux risques cyber réduit les erreurs humaines et renforce la posture de sécurité."
+    },
+    {
+        "QuestionAvancee": {
+            "id": 5,
+            "value": "Avez-vous une politique de gestion des accès ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "La gestion des accès regroupe toutes les mesures permettant de s'assurer que chacun n'a accès qu'au éléments nécessaires à son poste. Celà permet de limiter l’exposition des données aux seules personnes autorisées."
+    },
+    {
+        "QuestionAvancee": {
+            "id": 6,
+            "value": "Disposez-vous d’un plan de reprise des activités en cas de cyberattaque ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": 
+            "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
+    },
+    {
+        "QuestionAvancee": {
             "id": 7,
+            "value": "Votre entreprise impose-t-elle un changement régulier des mots de passe ?"
+        },
+        "Type_rep": "QCU",
+        "Reponse_possibles": {
+            "Choix1": "Oui, tous les X mois",
+            "Choix2": "Oui, mais pas strictement appliqué",
+            "Choix3": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": 
+            "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
+    },
+    {
+        "QuestionAvancee": {
+            "id": 8,
+            "value": "Savez-vous si votre entreprise utilise un pare-feu ou un antivirus avancé ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": 
+            "Un plan de reprise d'activité (PRA) est un ensemble de procédures (techniques, organisationnelles, sécurité) qui permettent à une entreprise de prévoir par anticipation, les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique."
+    },
+    {
+        "QuestionSimple": {
+            "id": 9,
+            "value": "Avez-vous une politique de sauvegarde des données ?"
+        },
+        "Type_rep": "Booléen",
+        "Reponse_possibles": {
+            "Choix1": "Oui",
+            "Choix2": "Non"
+        },
+        "Réponse_attendue": {
+            "isCorrect": ["Choix1"]
+        },
+        "Conseil": "Sauvegarder régulièrement les données de l’entreprise est essentiel pour prévenir leur perte ou vol."
+    },
+    {
+        "QuestionSimple": {
+            "id": 10,
             "value": "Le télétravail est-il autorisé dans votre entreprise ?"
         },
         "Type_rep": "QCU",
