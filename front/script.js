@@ -106,16 +106,19 @@ function getQuestionHTML(questionData) {
   <div class="flex flex-col items-center p-[1rem]">
     <button type="button" onclick="location.href='index.html'">Retour à l'accueil</button>
     <h2>${Question.value}</h2>
-    <form>
+    <form onsubmit="getInput(event)">
       ${optionsHTML}
-      <button type="button" onclick="getInput()">Suivant</button>
+      <button type="submit">Suivant</button>
     </form>
   </div>
   `;
 }
 
 // Récupère les réponses de l'utilisateur
-function getInput() {
+function getInput(event) {
+  // Empêche le rechargement de la page
+  if (event) event.preventDefault();
+
   const currentQuestion = profil[idQuestion];
   const { Reponse_possibles } = currentQuestion;
 
@@ -124,46 +127,55 @@ function getInput() {
     const input = document.getElementById(key);
     userResponses[key] = input ? input.checked : false;
   }
-  writeToJSON();
 
-  idQuestion++;
-  insertQuestion(); // Passe à la question suivante
+  // Sauvegarde les réponses et passe à la question suivante après succès
+  writeToJSON(userResponses)
+    .then(() => {
+      idQuestion++;
+      if (idQuestion < profil.length) {
+        insertQuestion(); // Passe à la question suivante
+      } else {
+        console.log("Questionnaire terminé.");
+        location.href = "end.html"; // Redirige vers une page de fin
+      }
+    })
+    .catch((err) => {
+      console.error("Erreur lors de la sauvegarde :", err);
+      alert("Une erreur est survenue. Veuillez réessayer.");
+    });
 }
 
 // Ecrit les réponses de l'utilisateur dans result.json via un POST
-function writeToJSON() {
-  // Prépare les données à envoyer
-  const currentQuestion = profil[idQuestion];
-  const { Question, Reponse_possibles } = currentQuestion;
+function writeToJSON(userResponses) {
+  return new Promise((resolve, reject) => {
+    const currentQuestion = profil[idQuestion];
+    const result = {
+      questionId: currentQuestion.Question.id,
+      question: currentQuestion.Question.value,
+      responses: userResponses,
+    };
 
-  const userResponses = {};
-  for (const key of Object.keys(Reponse_possibles)) {
-    const input = document.getElementById(key);
-    if (input && input.checked) {
-      userResponses[key] = input.checked;
-    }
-  }
-
-  const result = {
-    questionId: currentQuestion.Question.id,
-    question: Question.value,
-    responses: userResponses,
-  };
-
-  // Envoie les données au backend
-  fetch("../back/saveResult.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(result),
-  })
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      return res.json();
+    // Envoie les données au backend
+    fetch("http://localhost:5000/back/saveResult.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(result),
     })
-    .then((response) => console.log("Données sauvegardées avec succès :", response))
-    .catch((err) => console.error("Erreur lors de la sauvegarde :", err));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Données sauvegardées :", data);
+        resolve();
+      })
+      .catch((err) => {
+        console.error("Erreur lors de l'envoi des données :", err);
+        reject(err);
+      });
+  });
 }
 
 // Fonction appelée pour démarrer le questionnaire en fonction de la sélection

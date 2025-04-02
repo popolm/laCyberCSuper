@@ -1,0 +1,13 @@
+[
+    {
+        "questionId": 1,
+        "question": "Votre mot de passe contient-il des caract\u00e8res vari\u00e9s ?",
+        "responses": {
+            "Choix1": false,
+            "Choix2": true,
+            "Choix3": false,
+            "Choix4": false,
+            "Choix5": false
+        }
+    }
+]
