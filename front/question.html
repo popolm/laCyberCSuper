@@ -7,6 +7,13 @@
     <link rel="icon" type="image/vnd.icon" href="/src/img/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SécuriCheck</title>
+    <style>
+      input[type="email"] {
+        padding: 5px;
+        margin-top: 10px;
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <header class="flex items-center">
@@ -17,25 +24,29 @@
     </header>
 
     <div class="cta">
-      <div id="insert">
-        <p id="question-text">Quel type de professionnel êtes-vous ?</p>
-        <div class="flex flex-col items-center p-[1rem]">
-          <div>
-            <div class="flex gap-[1rem]">
-              <input type="radio" id="input1" name="profession" />
-              <label for="input1">Chef d'entreprise</label>
-            </div>
-            <div class="flex gap-[1rem]">
-              <input type="radio" id="input2" name="profession" />
-              <label for="input2">Collaborateur</label>
-            </div>
-            <div class="flex gap-[1rem]">
-              <input type="radio" id="input3" name="profession" />
-              <label for="input3">D.S.I.</label>
-            </div>
-          </div>
-        </div>
-        <button type="button" onclick="startQuestionnaire()">Commencer</button>
+      <div id="role-selection">
+        <p>Choisissez votre rôle :</p>
+        <button onclick="startQuiz('DSI')">DSI</button>
+        <button onclick="startQuiz('Patron')">Patron</button>
+        <button onclick="startQuiz('User')">Collaborateur</button>
+      </div>
+
+      <div id="quiz-container" class="hidden">
+        <h2 id="question-title"></h2>
+        <div id="answers"></div>
+        <button onclick="nextQuestion()">Suivant</button>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <h2>Conseils personnalisés</h2>
+        <div id="advice-list"></div>
+        <label for="contact-email"
+          >Si vous souhaitez être recontacté·e, entrez votre email :</label
+        >
+        <input type="email" id="contact-email" placeholder="votre@email.com" />
+        <button onclick="downloadResults()">
+          📄 Télécharger mes résultats
+        </button>
       </div>
     </div>
     <footer class="footer">

@@ -1,194 +1,190 @@
-// GLOBAL SCOPE
+let data = { DSI: null, Patron: null, User: null };
+let questions = [];
+let currentIndex = 0;
+let badAnswers = [];
+let selectedRole = null;
+let answersRecord = [];
 
-let question;
-let idQuestion = 0;
-let profil;
-let dataUser;
-
-// Fonction pour afficher la question sur la profession
-function displayProfessionQuestion() {
-  const insertElement = document.getElementById("insert");
-  insertElement.innerHTML = `
-    <p id="question-text">Quel type de professionnel êtes-vous ?</p>
-    <div class="flex flex-col items-center p-[1rem]">
-      <div>
-        <div class="flex gap-[1rem]">
-          <input type="radio" id="input1" name="profession" />
-          <label for="input1">Chef d'entreprise</label>
-        </div>
-        <div class="flex gap-[1rem]">
-          <input type="radio" id="input2" name="profession" />
-          <label for="input2">Collaborateur</label>
-        </div>
-        <div class="flex gap-[1rem]">
-          <input type="radio" id="input3" name="profession" />
-          <label for="input3">D.S.I.</label>
-        </div>
-      </div>
-    </div>
-    <button type="button" onclick="location.href='index.html'">Retour</button>
-    <button type="button" onclick="startQuestionnaire()">Commencer</button>
-
-  `;
+async function loadData() {
+  const [dsi, patron, user] = await Promise.all([
+    fetch("../back/dataDSI.json").then((r) => r.json()),
+    fetch("../back/dataPatron.json").then((r) => r.json()),
+    fetch("../back/dataUser.json").then((r) => r.json()),
+  ]);
+  data.DSI = dsi;
+  data.Patron = patron;
+  data.User = user;
 }
 
-// Fonction pour charger les questions en fonction du type de professionnel
-function loadQuestions(profession) {
-  let filePath;
-  switch (profession) {
-    case "Collaborateur":
-      filePath = "../back/dataUser.json";
-      break;
-    case "D.S.I.":
-      filePath = "../back/dataDSI.json";
-      break;
-    case "Chef d'entreprise":
-      filePath = "../back/dataPatron.json";
-      break;
-    default:
-      console.error("Profession non reconnue !");
-      return;
-  }
+async function startQuiz(role) {
+  if (!data.DSI) await loadData();
+  questions = data[role].filter((q) => getNiveau(q) === "medium");
+  selectedRole = role;
+  currentIndex = 0;
+  badAnswers = [];
+  answersRecord = [];
 
-  fetch(filePath)
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      return res.json();
-    })
-    .then((data) => {
-      dataUser = data;
-      profil = data;
-      idQuestion = 0; // Réinitialise l'index des questions
-      insertQuestion();
-    })
-    .catch((err) => console.error("Erreur de chargement JSON :", err));
+  document.getElementById("role-selection").classList.add("hidden");
+  document.getElementById("quiz-container").classList.remove("hidden");
+  showQuestion();
 }
 
-// Fonction pour insérer une question dans le DOM
-function insertQuestion() {
-  if (!profil || idQuestion >= profil.length) {
-    console.log("Toutes les questions ont été affichées.");
-    return;
-  }
+function showQuestion() {
+  const questionData = questions[currentIndex];
+  const q =
+    questionData.Question ||
+    questionData.QuestionAvancee ||
+    questionData.QuestionSimple ||
+    questionData.QuestionBase;
+  document.getElementById("question-title").innerText = q.value;
+  const repDiv = document.getElementById("answers");
+  repDiv.innerHTML = "";
 
-  const currentQuestion = profil[idQuestion];
-  const nextQuestion = document.getElementById("insert");
-  nextQuestion.innerHTML = getQuestionHTML(currentQuestion);
+  const type = questionData.Type_rep;
+  const reps = questionData.Reponse_possibles;
+
+  for (const [key, value] of Object.entries(reps)) {
+    const input = document.createElement("input");
+    input.type = type === "QCM" ? "checkbox" : "radio";
+    input.name = "response";
+    input.value = key;
+    input.id = key;
+
+    const label = document.createElement("label");
+    label.htmlFor = key;
+    label.innerText = value;
+
+    repDiv.appendChild(input);
+    repDiv.appendChild(label);
+    repDiv.appendChild(document.createElement("br"));
+  }
 }
 
-// Génère le HTML pour une question
-function getQuestionHTML(questionData) {
-  const { Question, Reponse_possibles, Type_rep } = questionData;
+function nextQuestion() {
+  const questionData = questions[currentIndex];
+  const q =
+    questionData.Question ||
+    questionData.QuestionAvancee ||
+    questionData.QuestionSimple ||
+    questionData.QuestionBase;
+  const repAttendue = questionData.Réponse_attendue?.isCorrect;
 
-  let typeQuestion;
-  if (Type_rep === "QCM") {
-    typeQuestion = "checkbox";
-  } else if (Type_rep === "QCU") {
-    typeQuestion = "radio";
-  } else {
-    console.error("Type de question non reconnu !");
-    return `<p>Erreur : Type de question non reconnu.</p>`;
-  }
+  let selected = [];
+  document
+    .querySelectorAll('input[name="response"]:checked')
+    .forEach((el) => selected.push(el.value));
 
-  let optionsHTML = "";
-  for (const [key, value] of Object.entries(Reponse_possibles)) {
-    optionsHTML += `
-      <div>
-        <input type="${typeQuestion}" id="${key}" name="response" />
-        <label for="${key}">${value}</label>
-      </div>
-    `;
-  }
+  const isCorrect =
+    repAttendue &&
+    JSON.stringify(repAttendue.sort()) === JSON.stringify(selected.sort());
 
-  return `
-  <div class="flex flex-col items-center p-[1rem]">
-    <button type="button" onclick="location.href='index.html'">Retour à l'accueil</button>
-    <h2>${Question.value}</h2>
-    <form onsubmit="getInput(event)">
-      ${optionsHTML}
-      <button type="submit">Suivant</button>
-    </form>
-  </div>
-  `;
-}
-
-// Récupère les réponses de l'utilisateur
-function getInput(event) {
-  // Empêche le rechargement de la page
-  if (event) event.preventDefault();
-
-  const currentQuestion = profil[idQuestion];
-  const { Reponse_possibles } = currentQuestion;
-
-  const userResponses = {};
-  for (const key of Object.keys(Reponse_possibles)) {
-    const input = document.getElementById(key);
-    userResponses[key] = input ? input.checked : false;
-  }
-
-  // Sauvegarde les réponses et passe à la question suivante après succès
-  writeToJSON(userResponses)
-    .then(() => {
-      idQuestion++;
-      if (idQuestion < profil.length) {
-        insertQuestion(); // Passe à la question suivante
-      } else {
-        console.log("Questionnaire terminé.");
-        location.href = "end.html"; // Redirige vers une page de fin
-      }
-    })
-    .catch((err) => {
-      console.error("Erreur lors de la sauvegarde :", err);
-      alert("Une erreur est survenue. Veuillez réessayer.");
-    });
-}
-
-// Ecrit les réponses de l'utilisateur dans result.json via un POST
-function writeToJSON(userResponses) {
-  return new Promise((resolve, reject) => {
-    const currentQuestion = profil[idQuestion];
-    const result = {
-      questionId: currentQuestion.Question.id,
-      question: currentQuestion.Question.value,
-      responses: userResponses,
-    };
-
-    // Envoie les données au backend
-    fetch("http://localhost:5000/back/saveResult.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(result),
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        console.log("Données sauvegardées :", data);
-        resolve();
-      })
-      .catch((err) => {
-        console.error("Erreur lors de l'envoi des données :", err);
-        reject(err);
-      });
+  answersRecord.push({
+    question: q.value,
+    selected,
+    correct: !!isCorrect,
   });
+
+  if (!isCorrect) {
+    badAnswers.push({
+      question: q.value,
+      conseil: questionData.Conseil,
+    });
+  }
+
+  currentIndex++;
+  if (currentIndex >= questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+  }
+  console.log("Réponses cochées :", selected);
+  console.log("Réponses attendues :", repAttendue);
 }
 
-// Fonction appelée pour démarrer le questionnaire en fonction de la sélection
-function startQuestionnaire() {
-  const selectedProfession = document.querySelector(
-    'input[name="profession"]:checked'
-  );
-  if (selectedProfession) {
-    loadQuestions(selectedProfession.nextElementSibling.textContent.trim());
+function getNiveau(questionData) {
+  const q =
+    questionData.Question ||
+    questionData.QuestionAvancee ||
+    questionData.QuestionSimple ||
+    questionData.QuestionBase;
+  return q.niveauQuestion;
+}
+
+function endQuiz() {
+  // Vérifie si on vient de terminer les questions medium
+  if (getNiveau(questions[0]) === "medium") {
+    const nextLevel = badAnswers.length === 0 ? "difficile" : "simple";
+    const nextQuestions = data[selectedRole].filter(
+      (q) => getNiveau(q) === nextLevel
+    );
+
+    if (nextQuestions.length > 0) {
+      questions = nextQuestions;
+      currentIndex = 0;
+      badAnswers = [];
+      showQuestion();
+      return;
+    }
+  }
+
+  document.getElementById("quiz-container").classList.add("hidden");
+  document.getElementById("result-container").classList.remove("hidden");
+
+  const adviceList = document.getElementById("advice-list");
+  adviceList.innerHTML = "";
+
+  const scoreTotal = questions.length;
+  const scoreBonnes = scoreTotal - badAnswers.length;
+
+  const scoreDiv = document.createElement("div");
+  scoreDiv.innerHTML = `<h3>🧾 Résultat : ${scoreBonnes} / ${scoreTotal} bonnes réponses</h3>`;
+  adviceList.appendChild(scoreDiv);
+
+  if (badAnswers.length === 0) {
+    const bravo = document.createElement("p");
+    bravo.innerText = "Bravo, vous avez tout bon ! 🎉";
+    adviceList.appendChild(bravo);
   } else {
-    alert("Veuillez sélectionner un type de professionnel !");
+    badAnswers.forEach((el) => {
+      const div = document.createElement("div");
+      div.classList.add("question-block");
+      div.innerHTML = `<strong>Question :</strong> ${el.question}<br><strong>Conseil :</strong> ${el.conseil}`;
+      adviceList.appendChild(div);
+    });
   }
 }
 
-// Affiche la question sur la profession au chargement de la page
-document.addEventListener("DOMContentLoaded", displayProfessionQuestion);
+function downloadResults() {
+  const email = document.getElementById("contact-email")?.value || "";
+  const result = {
+    date: new Date().toISOString(),
+    role: selectedRole,
+    email: email,
+    responses: answersRecord,
+    erreurs: badAnswers,
+  };
+  const blob = new Blob([JSON.stringify(result, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  fetch("http://localhost:5000/back/saveResult.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(result),
+  })
+    .then((res) =>
+      res.ok
+        ? console.log("Résultat sauvegardé côté serveur.")
+        : console.error("Erreur serveur")
+    )
+    .catch((err) => console.error("Erreur réseau", err));
+  a.download = "result.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
