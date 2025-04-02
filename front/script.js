@@ -1,36 +1,30 @@
 // GLOBAL SCOPE
 
 let question;
+let idQuestion=0;
+
+const dataDSI = require("../back/dataDSI.json");
+const dataPatron = require("../dataPatron/dataDSI.json");
+const dataUser = require("../back/dataUser.json");
+
+let profil = dataUser;
 
 // END GLOBAL SCOPE
+
+//Faire fonction choix user
 
 function insertQuestion() {
   let nextQuestion = document.getElementById("insert");
 
-  nextQuestion.innerHTML = getQuestion(1);
+  nextQuestion.innerHTML = getQuestion(idQuestion);
 }
+console.log(dataUser);
 
-function getQuestion(idQuestion) {
+function getQuestion(profil, Question, id, value) {
   switch (idQuestion) {
-    case 1:
+    case idQuestion:
       question = ` 
-    <p>Quel type de professionnel êtes-vous ?</p>
-        <div class=" flex flex-col items-center p-[1rem]">
-            <div>
-            <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input1">
-                <label>Chef d'entreprise</label>
-            </div>
-            <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input2">
-                <label>Collaborateur</label>
-            </div>
-            <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input3">
-                <label>D.S.I.</label>
-            </div>
-            <div>
-        </div>
+        
     `;
       break;
   }
@@ -75,7 +69,10 @@ function getInput() {
     5: input5.checked,
   };
 
-  console.log(data);
+  // console.log(data);
+  idQuestion++;
+  console.log(idQuestion);
+  insertQuestion();
 }
 
 function createJSON() {}

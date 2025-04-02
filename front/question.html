@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/vnd.icon" href="/src/img/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SécuriCheck</title>
   </head>
@@ -16,9 +17,10 @@
     </header>
 
     <div class="cta">
-      <div id="insert"><p>Quel type de professionnel êtes-vous ?</p>
+      <div id="insert">
+        <p>Quel type de professionnel êtes-vous ?</p>
         <div class=" flex flex-col items-center p-[1rem]">
-            <div>
+          <div>
             <div class="flex gap-[1rem]">
                 <input type="checkbox" id="input1">
                 <label>Chef d'entreprise</label>
@@ -31,13 +33,13 @@
                 <input type="checkbox" id="input3">
                 <label>D.S.I.</label>
             </div>
-            <div>
-        </div></div>
+          </div>
+      </div>
+      </div>
       <button class="bg-white" type="submit" onclick="getInput()">
         Suivant
       </button>
     </div>
-
     <footer class="footer">
       &copy; 2025 SécuriCheck - Tous droits réservés
     </footer>
