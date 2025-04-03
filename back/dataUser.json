@@ -2,7 +2,8 @@
   {
     "QuestionBase": {
       "id": 1,
-      "value": "Votre mot de passe contient-il des caractères variés ?"
+      "value": "Votre mot de passe contient-il des caractères variés ?",
+      "niveauQuestion": "medium"
     },
     "Type_rep": "QCM",
     "Reponse_possibles": {
@@ -20,7 +21,8 @@
   {
     "QuestionBase": {
       "id": 2,
-      "value": "Quand avez-vous changé votre mot de passe pour la dernière fois ?"
+      "value": "Quand avez-vous changé votre mot de passe pour la dernière fois ?",
+      "niveauQuestion": "medium"
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -37,13 +39,16 @@
   {
     "QuestionBase": {
       "id": 3,
-      "value": "Verrouillez-vous toujours votre ordinateur en quittant votre poste ?"
+      "value": "Verrouillez-vous toujours votre ordinateur en quittant votre poste ?",
+      "niveauQuestion": "medium"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
       "Choix1": "Oui",
       "Choix2": "Oui, mais parfois j'oublie",
-      "Choix3": "Non",
+      "Choix3": "Non"
+
     },
     "Réponse_attendue": {
       "isCorrect": ["Choix1"]
@@ -53,7 +58,9 @@
   {
     "QuestionBase": {
       "id": 4,
-      "value": "Quels usages avez-vous de votre ordinateur professionnel ?"
+      "value": "Quels usages avez-vous de votre ordinateur professionnel ?",
+      "niveauQuestion": "medium"
+
     },
     "Type_rep": "QCM",
     "Reponse_possibles": {
@@ -70,7 +77,10 @@
   {
     "QuestionAvancee": {
       "id": 5,
-      "value": "Où gardez-vous votre mot de passe ?"
+
+      "value": "Où gardez-vous votre mot de passe ?",
+      "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -85,11 +95,14 @@
     "Conseil": "Ne stockez jamais vos mots de passe dans des fichiers non sécurisés, comme des fichiers texte ou des post-its. Utilisez un gestionnaire de mots de passe sécurisé pour stocker et générer des mots de passe forts et uniques pour chaque service."
   },
   {
-    "QuestionAvancee": {
+
+    "Question": {
       "id": 6,
-      "value": "Utilisez-vous la double authentification (2FA) ?"
+      "value": "Utilisez-vous la double authentification (2FA) ?",
+      "niveauQuestion": "difficile"
+
     },
-    "Type_rep": "Booléen",
+    "Type_rep": "QCU",
     "Reponse_possibles": {
       "Choix1": "Oui",
       "Choix2": "Non"
@@ -100,9 +113,11 @@
     "Conseil": "Activez la double authentification (2FA) chaque fois que c'est possible. Cela ajoute une couche supplémentaire de sécurité en exigeant une vérification supplémentaire (code, biométrie, etc.) pour accéder à vos comptes. Cela protège vos informations contre les accès non autorisés."
   },
   {
-    "QuestionAvancee": {
+    "Question": {
       "id": 7,
-      "value": "Que fait la commande Windows + L ?"
+      "value": "Que fait la commande Windows + L ?",
+      "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -117,9 +132,11 @@
     "Conseil": "Windows + L est le raccourci clavier pour verrouiller votre session. Verrouillez toujours votre ordinateur lorsque vous vous éloignez, afin d’éviter tout risque d’accès non autorisé à vos informations."
   },
   {
-    "QuestionAvancee": {
+    "Question": {
       "id": 8,
-      "value": "Comment gérez-vous les mises à jour de votre ordinateur ?"
+      "value": "Comment gérez-vous les mises à jour de votre ordinateur ?",
+      "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -133,11 +150,13 @@
     "Conseil": "Installez toujours les mises à jour dès qu'elles sont disponibles. Elles sont cruciales pour la sécurité de votre appareil, car elles corrigent les vulnérabilités et ajoutent des améliorations. Ne retardez jamais les mises à jour sous prétexte de gagner du temps, car cela expose votre système à des risques."
   },
   {
-    "QuestionSimple": {
+    "Question": {
       "id": 9,
-      "value": "Votre poste de travail est-il protégé par un mot de passe ?"
+      "value": "Votre poste de travail est-il protégé par un mot de passe ?",
+      "niveauQuestion": "simple"
     },
-    "Type_rep": "Booléen",
+    "Type_rep": "QCU",
+
     "Reponse_possibles": {
       "Choix1": "Oui",
       "Choix2": "Non"
@@ -148,9 +167,11 @@
     "Conseil": "Utilisez toujours un mot de passe pour protéger votre poste de travail. Assurez-vous qu'il est robuste et unique, et verrouillez-le dès que vous vous éloignez de votre ordinateur pour éviter toute tentative d'accès non autorisé."
   },
   {
-    "QuestionSimple": {
+    "Question": {
       "id": 10,
-      "value": "Que faites-vous si vous recevez un mail d’un inconnu ?"
+      "value": "Que faites-vous si vous recevez un mail d’un inconnu ?",
+      "niveauQuestion": "simple"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {

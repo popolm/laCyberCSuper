@@ -1,161 +1,175 @@
 [
-    {
-        "QuestionBase": {
-            "id": 1,
-            "value": "Avez-vous un responsable désigné pour superviser la cybersécurité ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Un responsable cybersécurité est essentiel pour coordonner les actions de protection et répondre aux incidents. Désignez un référent ou une équipe dédiée pour assurer une surveillance efficace."
+  {
+    "Question": {
+      "id": 1,
+      "value": "Avez-vous un responsable désigné pour superviser la cybersécurité ?",
+      "niveauQuestion": "medium"
     },
-    { 
-        "QuestionBase": {
-            "id": 2,
-            "value": "Avez-vous un plan de gestion des incidents de sécurité ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Un plan de réponse aux incidents permet de réagir rapidement en cas de cyberattaque. Définissez des procédures claires : identification, confinement, éradication et récupération. Testez-le régulièrement."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "QuestionBase": {
-            "id": 3,
-            "value": "Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Les audits permettent de détecter les failles avant qu’elles ne soient exploitées. Effectuez un audit au moins une fois par an et après chaque changement majeur."
+    "Conseil": "Un responsable cybersécurité est essentiel pour coordonner les actions de protection et répondre aux incidents. Désignez un référent ou une équipe dédiée pour assurer une surveillance efficace."
+  },
+  {
+    "Question": {
+      "id": 2,
+      "value": "Avez-vous un plan de gestion des incidents de sécurité ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "QuestionBase": {
-            "id": 4,
-            "value": "Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Appliquez le principe du moindre privilège : chaque utilisateur ne doit accéder qu’aux ressources nécessaires à son travail. Révisez ces accès régulièrement."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "QuestionBase": {
-            "id": 5,
-            "value": "Avez-vous mis en place une politique de gestion des mots de passe ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Des règles strictes doivent être imposées : longueur minimale, complexité, interdiction des mots de passe réutilisés. Encouragez l’usage d’un gestionnaire de mots de passe."
+    "Conseil": "Un plan de réponse aux incidents permet de réagir rapidement en cas de cyberattaque. Définissez des procédures claires : identification, confinement, éradication et récupération. Testez-le régulièrement."
+  },
+  {
+    "Question": {
+      "id": 3,
+      "value": "Effectuez-vous régulièrement des audits de sécurité pour identifier les vulnérabilités dans vos systèmes ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "QuestionBase": {
-            "id": 6,
-            "value": "Vous découvrez qu’un employé a partagé des documents confidentiels via une plateforme de stockage en ligne non sécurisée. Que faites-vous ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Je lui demande immédiatement de supprimer les fichiers et j’informe l’équipe de cybersécurité pour analyser l’incident.",
-            "Choix2": "Je ne fais rien, car les employés doivent pouvoir travailler librement.",
-            "Choix3": "Je bloque immédiatement tous les accès à cette plateforme pour tous les employés."
-        },
-        "Conseil": "Informez immédiatement l’employé, supprimez les fichiers et alertez l’équipe cybersécurité pour évaluer les risques. Sensibilisez vos collaborateurs sur les outils sécurisés à utiliser."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "QuestionAvancee": {
-            "id": 6,
-            "value": "Effectuez-vous des tests de pénétration sur vos systèmes ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Les tests de pénétration permettent d’identifier des failles exploitables par des attaquants. Faites appel à des experts au moins une fois par an."
+    "Conseil": "Les audits permettent de détecter les failles avant qu’elles ne soient exploitées. Effectuez un audit au moins une fois par an et après chaque changement majeur."
+  },
+  {
+    "Question": {
+      "id": 4,
+      "value": "Les accès aux données sensibles sont-ils limités aux seuls utilisateurs qui en ont besoin ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "QuestionAvancee": {
-            "id": 7,
-            "value": "Avez-vous mis en place des outils de détection d’intrusions ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Un SIEM (Security Information and Event Management) ou un IDS/IPS permet de détecter et bloquer les menaces en temps réel."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "QuestionAvancee": {
-            "id": 8,
-            "value": "Les employés sont-ils testés avec des simulations de phishing et ransomwares ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Des simulations régulières permettent d’évaluer la vigilance des employés et de renforcer leur formation. Mettez en place des campagnes de sensibilisation."
+    "Conseil": "Appliquez le principe du moindre privilège : chaque utilisateur ne doit accéder qu’aux ressources nécessaires à son travail. Révisez ces accès régulièrement."
+  },
+  {
+    "Question": {
+      "id": 5,
+      "value": "Avez-vous mis en place une politique de gestion des mots de passe ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "QuestionAvancee": {
-            "id": 9,
-            "value": "En tant que DSI, vous recevez une alerte concernant une tentative d'intrusion sur le réseau interne. Que faites-vous ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Je contacte immédiatement les responsables techniques pour analyser l'incident.",
-            "Choix2": "J'ignore l'alerte car il s'agit probablement d'une fausse alerte.",
-            "Choix3": "Je préviens les collaborateurs de ne pas se connecter pendant quelques heures."
-        },
-        "Conseil": "Contactez immédiatement les responsables techniques pour analyser l’incident. Isolez la menace et appliquez le plan de réponse aux incidents."
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
     },
-    {
-        "QuestionSimple": {
-            "id": 10,
-            "value": "Le télétravail est-il sécurisé par un VPN pour tous les collaborateurs ?"
-        },
-        "Type_rep": "QCU",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non",
-            "Choix3": "Pas de télétravail"
-        },
-        "Conseil": "Un VPN sécurisé chiffre les connexions et empêche l’interception des données. Obligez son utilisation pour tout accès distant."
+    "Conseil": "Des règles strictes doivent être imposées : longueur minimale, complexité, interdiction des mots de passe réutilisés. Encouragez l’usage d’un gestionnaire de mots de passe."
+  },
+  {
+    "Question": {
+      "id": 6,
+      "value": "Vous découvrez qu’un employé a partagé des documents confidentiels via une plateforme de stockage en ligne non sécurisée. Que faites-vous ?",
+      "niveauQuestion": "medium"
     },
-    {
-        "QuestionSimple": {
-            "id": 11,
-            "value": "Les sauvegardes de données sont-elles effectuées régulièrement et stockées en lieu sécurisé ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Appliquez la règle du 3-2-1 : 3 copies des données, 2 supports différents (serveur local, cloud sécurisé...), 1 copie hors ligne pour se protéger des ransomwares"
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Je lui demande immédiatement de supprimer les fichiers et j’informe l’équipe de cybersécurité pour analyser l’incident.",
+      "Choix2": "Je ne fais rien, car les employés doivent pouvoir travailler librement.",
+      "Choix3": "Je bloque immédiatement tous les accès à cette plateforme pour tous les employés."
     },
-    {
-        "QuestionSimple": {
-            "id": 12,
-            "value": "Les employés sont-ils formés régulièrement à la cybersécurité ?"
-        },
-        "Type_rep": "Booléen",
-        "Reponse_possibles": {
-            "Choix1": "Oui",
-            "Choix2": "Non"
-        },
-        "Conseil": "Les erreurs humaines sont la première cause des cyberattaques. Une formation régulière et pratique (phishing, ransomwares, bonnes pratiques) réduit considérablement les risques."
-    }
+    "Conseil": "Informez immédiatement l’employé, supprimez les fichiers et alertez l’équipe cybersécurité pour évaluer les risques. Sensibilisez vos collaborateurs sur les outils sécurisés à utiliser."
+  },
+  {
+    "QuestionAvancee": {
+      "id": 6,
+      "value": "Effectuez-vous des tests de pénétration sur vos systèmes ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Les tests de pénétration permettent d’identifier des failles exploitables par des attaquants. Faites appel à des experts au moins une fois par an."
+  },
+  {
+    "QuestionAvancee": {
+      "id": 7,
+      "value": "Avez-vous mis en place des outils de détection d’intrusions ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Un SIEM (Security Information and Event Management) ou un IDS/IPS permet de détecter et bloquer les menaces en temps réel."
+  },
+  {
+    "QuestionAvancee": {
+      "id": 8,
+      "value": "Les employés sont-ils testés avec des simulations de phishing et ransomwares ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Des simulations régulières permettent d’évaluer la vigilance des employés et de renforcer leur formation. Mettez en place des campagnes de sensibilisation."
+  },
+  {
+    "QuestionAvancee": {
+      "id": 9,
+      "value": "En tant que DSI, vous recevez une alerte concernant une tentative d'intrusion sur le réseau interne. Que faites-vous ?",
+      "niveauQuestion": "difficile"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Je contacte immédiatement les responsables techniques pour analyser l'incident.",
+      "Choix2": "J'ignore l'alerte car il s'agit probablement d'une fausse alerte.",
+      "Choix3": "Je préviens les collaborateurs de ne pas se connecter pendant quelques heures."
+    },
+    "Conseil": "Contactez immédiatement les responsables techniques pour analyser l’incident. Isolez la menace et appliquez le plan de réponse aux incidents."
+  },
+  {
+    "QuestionSimple": {
+      "id": 10,
+      "value": "Le télétravail est-il sécurisé par un VPN pour tous les collaborateurs ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non",
+      "Choix3": "Pas de télétravail"
+    },
+    "Conseil": "Un VPN sécurisé chiffre les connexions et empêche l’interception des données. Obligez son utilisation pour tout accès distant."
+  },
+  {
+    "QuestionSimple": {
+      "id": 11,
+      "value": "Les sauvegardes de données sont-elles effectuées régulièrement et stockées en lieu sécurisé ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Appliquez la règle du 3-2-1 : 3 copies des données, 2 supports différents (serveur local, cloud sécurisé...), 1 copie hors ligne pour se protéger des ransomwares"
+  },
+  {
+    "QuestionSimple": {
+      "id": 12,
+      "value": "Les employés sont-ils formés régulièrement à la cybersécurité ?",
+      "niveauQuestion": "simple"
+    },
+    "Type_rep": "QCU",
+    "Reponse_possibles": {
+      "Choix1": "Oui",
+      "Choix2": "Non"
+    },
+    "Conseil": "Les erreurs humaines sont la première cause des cyberattaques. Une formation régulière et pratique (phishing, ransomwares, bonnes pratiques) réduit considérablement les risques."
+  }
+
 ]

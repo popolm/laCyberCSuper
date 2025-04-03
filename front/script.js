@@ -1,87 +1,190 @@
-// GLOBAL SCOPE
+let data = { DSI: null, Patron: null, User: null };
+let questions = [];
+let currentIndex = 0;
+let badAnswers = [];
+let selectedRole = null;
+let answersRecord = [];
 
-let question;
-var dataDSI = require("../back/dataDSI.json");
-var dataPatron = require("../dataPatron/dataDSI.json");
-var dataUser = require("../back/dataUser.json");
-var result = require("../back/result.json");
-
-console.log(dataPatron);
-
-// END GLOBAL SCOPE
-
-function insertQuestion() {
-  let nextQuestion = document.getElementById("insert");
-
-  nextQuestion.innerHTML = getQuestion(1);
+async function loadData() {
+  const [dsi, patron, user] = await Promise.all([
+    fetch("../back/dataDSI.json").then((r) => r.json()),
+    fetch("../back/dataPatron.json").then((r) => r.json()),
+    fetch("../back/dataUser.json").then((r) => r.json()),
+  ]);
+  data.DSI = dsi;
+  data.Patron = patron;
+  data.User = user;
 }
 
-function getQuestion(idQuestion) {
-  switch (idQuestion) {
-    case 1:
-      question = ` 
-    <p>Quel type de professionnel êtes-vous ?</p>
-        <div class=" flex flex-col items-center p-[1rem]">
-            <div>
-            <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input1">
-                <label>Chef d'entreprise</label>
-            </div>
-            <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input2">
-                <label>Collaborateur</label>
-            </div>
-            <div class="flex gap-[1rem]">
-                <input type="checkbox" id="input3">
-                <label>D.S.I.</label>
-            </div>
-            <div>
-        </div>
-    `;
-      break;
-  }
+async function startQuiz(role) {
+  if (!data.DSI) await loadData();
+  questions = data[role].filter((q) => getNiveau(q) === "medium");
+  selectedRole = role;
+  currentIndex = 0;
+  badAnswers = [];
+  answersRecord = [];
 
-  return question;
+  document.getElementById("role-selection").classList.add("hidden");
+  document.getElementById("quiz-container").classList.remove("hidden");
+  showQuestion();
 }
 
-function getInput() {
-  if (document.getElementById("input1") !== null) {
-    input1 = document.getElementById("input1");
-  } else {
-    input1 = 0;
+function showQuestion() {
+  const questionData = questions[currentIndex];
+  const q =
+    questionData.Question ||
+    questionData.QuestionAvancee ||
+    questionData.QuestionSimple ||
+    questionData.QuestionBase;
+  document.getElementById("question-title").innerText = q.value;
+  const repDiv = document.getElementById("answers");
+  repDiv.innerHTML = "";
+
+  const type = questionData.Type_rep;
+  const reps = questionData.Reponse_possibles;
+
+  for (const [key, value] of Object.entries(reps)) {
+    const input = document.createElement("input");
+    input.type = type === "QCM" ? "checkbox" : "radio";
+    input.name = "response";
+    input.value = key;
+    input.id = key;
+
+    const label = document.createElement("label");
+    label.htmlFor = key;
+    label.innerText = value;
+
+    repDiv.appendChild(input);
+    repDiv.appendChild(label);
+    repDiv.appendChild(document.createElement("br"));
   }
-  if (document.getElementById("input2") !== null) {
-    input2 = document.getElementById("input2");
-  } else {
-    input2 = 0;
-  }
-  if (document.getElementById("input3") !== null) {
-    input3 = document.getElementById("input3");
-  } else {
-    input3 = 0;
-  }
-  if (document.getElementById("input4") !== null) {
-    input4 = document.getElementById("input4");
-  } else {
-    input4 = 0;
-  }
-  if (document.getElementById("input5") !== null) {
-    input5 = document.getElementById("input5");
-  } else {
-    input5 = 0;
+}
+
+function nextQuestion() {
+  const questionData = questions[currentIndex];
+  const q =
+    questionData.Question ||
+    questionData.QuestionAvancee ||
+    questionData.QuestionSimple ||
+    questionData.QuestionBase;
+  const repAttendue = questionData.Réponse_attendue?.isCorrect;
+
+  let selected = [];
+  document
+    .querySelectorAll('input[name="response"]:checked')
+    .forEach((el) => selected.push(el.value));
+
+  const isCorrect =
+    repAttendue &&
+    JSON.stringify(repAttendue.sort()) === JSON.stringify(selected.sort());
+
+  answersRecord.push({
+    question: q.value,
+    selected,
+    correct: !!isCorrect,
+  });
+
+  if (!isCorrect) {
+    badAnswers.push({
+      question: q.value,
+      conseil: questionData.Conseil,
+    });
   }
 
-  console.log(input1.checked);
+  currentIndex++;
+  if (currentIndex >= questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+  }
+  console.log("Réponses cochées :", selected);
+  console.log("Réponses attendues :", repAttendue);
+}
 
-  const data = {
-    1: input1.checked,
-    2: input2.checked,
-    3: input3.checked,
-    4: input4.checked,
-    5: input5.checked,
+function getNiveau(questionData) {
+  const q =
+    questionData.Question ||
+    questionData.QuestionAvancee ||
+    questionData.QuestionSimple ||
+    questionData.QuestionBase;
+  return q.niveauQuestion;
+}
+
+function endQuiz() {
+  // Vérifie si on vient de terminer les questions medium
+  if (getNiveau(questions[0]) === "medium") {
+    const nextLevel = badAnswers.length === 0 ? "difficile" : "simple";
+    const nextQuestions = data[selectedRole].filter(
+      (q) => getNiveau(q) === nextLevel
+    );
+
+    if (nextQuestions.length > 0) {
+      questions = nextQuestions;
+      currentIndex = 0;
+      badAnswers = [];
+      showQuestion();
+      return;
+    }
+  }
+
+  document.getElementById("quiz-container").classList.add("hidden");
+  document.getElementById("result-container").classList.remove("hidden");
+
+  const adviceList = document.getElementById("advice-list");
+  adviceList.innerHTML = "";
+
+  const scoreTotal = questions.length;
+  const scoreBonnes = scoreTotal - badAnswers.length;
+
+  const scoreDiv = document.createElement("div");
+  scoreDiv.innerHTML = `<h3>🧾 Résultat : ${scoreBonnes} / ${scoreTotal} bonnes réponses</h3>`;
+  adviceList.appendChild(scoreDiv);
+
+  if (badAnswers.length === 0) {
+    const bravo = document.createElement("p");
+    bravo.innerText = "Bravo, vous avez tout bon ! 🎉";
+    adviceList.appendChild(bravo);
+  } else {
+    badAnswers.forEach((el) => {
+      const div = document.createElement("div");
+      div.classList.add("question-block");
+      div.innerHTML = `<strong>Question :</strong> ${el.question}<br><strong>Conseil :</strong> ${el.conseil}`;
+      adviceList.appendChild(div);
+    });
+  }
+}
+
+function downloadResults() {
+  const email = document.getElementById("contact-email")?.value || "";
+  const result = {
+    date: new Date().toISOString(),
+    role: selectedRole,
+    email: email,
+    responses: answersRecord,
+    erreurs: badAnswers,
   };
-
-  console.log(data);
+  const blob = new Blob([JSON.stringify(result, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  fetch("http://localhost:5000/back/saveResult.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(result),
+  })
+    .then((res) =>
+      res.ok
+        ? console.log("Résultat sauvegardé côté serveur.")
+        : console.error("Erreur serveur")
+    )
+    .catch((err) => console.error("Erreur réseau", err));
+  a.download = "result.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
-
-function createJSON() {}
