@@ -97,3 +97,8 @@ main {
   bottom: 0;
   left: 0;
 }
+
+input[type="email"] {
+  padding: 5px;
+  display: block;
+}

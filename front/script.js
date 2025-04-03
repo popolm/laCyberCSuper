@@ -44,15 +44,20 @@ function showQuestion() {
   const reps = questionData.Reponse_possibles;
 
   for (const [key, value] of Object.entries(reps)) {
+    const container = document.createElement("div");
+    container.className = "flex items-center mb-2";
+
     const input = document.createElement("input");
     input.type = type === "QCM" ? "checkbox" : "radio";
     input.name = "response";
     input.value = key;
     input.id = key;
+    input.className = "mr-2";
 
     const label = document.createElement("label");
     label.htmlFor = key;
     label.innerText = value;
+    label.className = "ml-2";
 
     repDiv.appendChild(input);
     repDiv.appendChild(label);
@@ -74,6 +79,12 @@ function nextQuestion() {
     .querySelectorAll('input[name="response"]:checked')
     .forEach((el) => selected.push(el.value));
 
+  // Prevent proceeding if no option is selected
+  if (selected.length === 0) {
+    alert("Veuillez sélectionner une réponse avant de continuer.");
+    return;
+  }
+
   const isCorrect =
     repAttendue &&
     JSON.stringify(repAttendue.sort()) === JSON.stringify(selected.sort());
@@ -92,6 +103,7 @@ function nextQuestion() {
   }
 
   currentIndex++;
+
   if (currentIndex >= questions.length) {
     endQuiz();
   } else {
@@ -121,7 +133,6 @@ function endQuiz() {
     if (nextQuestions.length > 0) {
       questions = nextQuestions;
       currentIndex = 0;
-      badAnswers = [];
       showQuestion();
       return;
     }
@@ -133,25 +144,32 @@ function endQuiz() {
   const adviceList = document.getElementById("advice-list");
   adviceList.innerHTML = "";
 
-  const scoreTotal = questions.length;
+  const scoreTotal = questions.length + badAnswers.length;
   const scoreBonnes = scoreTotal - badAnswers.length;
 
   const scoreDiv = document.createElement("div");
   scoreDiv.innerHTML = `<h3>🧾 Résultat : ${scoreBonnes} / ${scoreTotal} bonnes réponses</h3>`;
   adviceList.appendChild(scoreDiv);
 
+  const adviceContainer = document.createElement("div");
+  adviceContainer.style.width = "60%";
+  adviceContainer.style.margin = "0 auto";
+  adviceContainer.style.textAlign = "justify";
+
   if (badAnswers.length === 0) {
     const bravo = document.createElement("p");
     bravo.innerText = "Bravo, vous avez tout bon ! 🎉";
-    adviceList.appendChild(bravo);
+    adviceContainer.appendChild(bravo);
   } else {
     badAnswers.forEach((el) => {
       const div = document.createElement("div");
       div.classList.add("question-block");
       div.innerHTML = `<strong>Question :</strong> ${el.question}<br><strong>Conseil :</strong> ${el.conseil}`;
-      adviceList.appendChild(div);
+      adviceContainer.appendChild(div);
     });
   }
+
+  adviceList.appendChild(adviceContainer);
 }
 
 function downloadResults() {
