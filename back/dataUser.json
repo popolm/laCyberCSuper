@@ -1,6 +1,6 @@
 [
   {
-    "Question": {
+    "QuestionBase": {
       "id": 1,
       "value": "Votre mot de passe contient-il des caractères variés ?",
       "niveauQuestion": "medium"
@@ -19,7 +19,7 @@
     "Conseil": "Un bon mot de passe doit comporter au minimum 12 caractères, avec une combinaison de minuscules, majuscules, chiffres et caractères spéciaux. Évitez d’utiliser des informations personnelles faciles à deviner, comme des dates ou des noms. Plus le mot de passe est complexe, mieux c’est !"
   },
   {
-    "Question": {
+    "QuestionBase": {
       "id": 2,
       "value": "Quand avez-vous changé votre mot de passe pour la dernière fois ?",
       "niveauQuestion": "medium"
@@ -37,16 +37,18 @@
     "Conseil": "Il est recommandé de changer vos mots de passe tous les 90 jours pour éviter qu'ils ne soient compromis. Assurez-vous également que vos mots de passe sont suffisamment complexes pour protéger vos informations sensibles."
   },
   {
-    "Question": {
+    "QuestionBase": {
       "id": 3,
       "value": "Verrouillez-vous toujours votre ordinateur en quittant votre poste ?",
       "niveauQuestion": "medium"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
       "Choix1": "Oui",
       "Choix2": "Oui, mais parfois j'oublie",
       "Choix3": "Non"
+
     },
     "Réponse_attendue": {
       "isCorrect": ["Choix1"]
@@ -58,6 +60,7 @@
       "id": 4,
       "value": "Quels usages avez-vous de votre ordinateur professionnel ?",
       "niveauQuestion": "medium"
+
     },
     "Type_rep": "QCM",
     "Reponse_possibles": {
@@ -72,10 +75,12 @@
     "Conseil": "Limitez l’usage personnel de votre poste de travail. Évitez d’utiliser des outils personnels (comme vos emails ou réseaux sociaux) pour des activités professionnelles. Sécurisez vos appareils personnels pour ne pas exposer le réseau de l'entreprise à des risques externes."
   },
   {
-    "Question": {
+    "QuestionAvancee": {
       "id": 5,
+
       "value": "Où gardez-vous votre mot de passe ?",
       "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -90,10 +95,12 @@
     "Conseil": "Ne stockez jamais vos mots de passe dans des fichiers non sécurisés, comme des fichiers texte ou des post-its. Utilisez un gestionnaire de mots de passe sécurisé pour stocker et générer des mots de passe forts et uniques pour chaque service."
   },
   {
+
     "Question": {
       "id": 6,
       "value": "Utilisez-vous la double authentification (2FA) ?",
       "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -110,6 +117,7 @@
       "id": 7,
       "value": "Que fait la commande Windows + L ?",
       "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -128,6 +136,7 @@
       "id": 8,
       "value": "Comment gérez-vous les mises à jour de votre ordinateur ?",
       "niveauQuestion": "difficile"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
@@ -147,6 +156,7 @@
       "niveauQuestion": "simple"
     },
     "Type_rep": "QCU",
+
     "Reponse_possibles": {
       "Choix1": "Oui",
       "Choix2": "Non"
@@ -161,6 +171,7 @@
       "id": 10,
       "value": "Que faites-vous si vous recevez un mail d’un inconnu ?",
       "niveauQuestion": "simple"
+
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
