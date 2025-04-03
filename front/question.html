@@ -7,13 +7,6 @@
     <link rel="icon" type="image/vnd.icon" href="/src/img/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SécuriCheck</title>
-    <style>
-      input[type="email"] {
-        padding: 5px;
-        margin-top: 10px;
-        display: block;
-      }
-    </style>
   </head>
   <body>
     <header class="flex items-center">
@@ -24,7 +17,7 @@
     </header>
 
     <div class="cta">
-      <div id="role-selection">
+      <div id="role-selection" class="m-2">
         <p>Choisissez votre rôle :</p>
         <button onclick="startQuiz('DSI')">DSI</button>
         <button onclick="startQuiz('Patron')">Patron</button>
@@ -32,21 +25,26 @@
       </div>
 
       <div id="quiz-container" class="hidden">
-        <h2 id="question-title"></h2>
-        <div id="answers"></div>
+        <h2 id="question-title" class="text-2xl"></h2>
+        <div id="answers" class="w-1/3 mx-auto text-left m-2"></div>
         <button onclick="nextQuestion()">Suivant</button>
       </div>
 
       <div id="result-container" class="hidden">
+        
         <h2>Conseils personnalisés</h2>
         <div id="advice-list"></div>
-        <label for="contact-email"
-          >Si vous souhaitez être recontacté·e, entrez votre email :</label
-        >
-        <input type="email" id="contact-email" placeholder="votre@email.com" />
+        <div class="p-4">
+
+        <div class="flex flex-row items-center" >
+          <label for="contact-email"
+            >Si vous souhaitez être recontacté·e, entrez votre email :</label>        
+            <input type="email" id="contact-email"  placeholder="votre@email.com" class="m-0 pl-4"/>
+      </div>
         <button onclick="downloadResults()">
           📄 Télécharger mes résultats
         </button>
+      </div>
       </div>
     </div>
     <footer class="footer">

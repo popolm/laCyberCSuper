@@ -44,15 +44,20 @@ function showQuestion() {
   const reps = questionData.Reponse_possibles;
 
   for (const [key, value] of Object.entries(reps)) {
+    const container = document.createElement("div");
+    container.className = "flex items-center mb-2";
+
     const input = document.createElement("input");
     input.type = type === "QCM" ? "checkbox" : "radio";
     input.name = "response";
     input.value = key;
     input.id = key;
+    input.className = "mr-2";
 
     const label = document.createElement("label");
     label.htmlFor = key;
     label.innerText = value;
+    label.className = "ml-2";
 
     repDiv.appendChild(input);
     repDiv.appendChild(label);
@@ -140,18 +145,25 @@ function endQuiz() {
   scoreDiv.innerHTML = `<h3>🧾 Résultat : ${scoreBonnes} / ${scoreTotal} bonnes réponses</h3>`;
   adviceList.appendChild(scoreDiv);
 
+  const adviceContainer = document.createElement("div");
+  adviceContainer.style.width = "60%";
+  adviceContainer.style.margin = "0 auto";
+  adviceContainer.style.textAlign = "justify";
+
   if (badAnswers.length === 0) {
     const bravo = document.createElement("p");
     bravo.innerText = "Bravo, vous avez tout bon ! 🎉";
-    adviceList.appendChild(bravo);
+    adviceContainer.appendChild(bravo);
   } else {
     badAnswers.forEach((el) => {
       const div = document.createElement("div");
       div.classList.add("question-block");
       div.innerHTML = `<strong>Question :</strong> ${el.question}<br><strong>Conseil :</strong> ${el.conseil}`;
-      adviceList.appendChild(div);
+      adviceContainer.appendChild(div);
     });
   }
+
+  adviceList.appendChild(adviceContainer);
 }
 
 function downloadResults() {

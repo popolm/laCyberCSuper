@@ -105,7 +105,7 @@
     },
     "Type_rep": "QCU",
     "Reponse_possibles": {
-      "Choix1": "Oui, tous les X mois",
+      "Choix1": "Oui, tous les 3 mois",
       "Choix2": "Oui, mais pas strictement appliqué",
       "Choix3": "Non"
     },
