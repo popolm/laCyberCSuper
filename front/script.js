@@ -79,6 +79,12 @@ function nextQuestion() {
     .querySelectorAll('input[name="response"]:checked')
     .forEach((el) => selected.push(el.value));
 
+  // Prevent proceeding if no option is selected
+  if (selected.length === 0) {
+    alert("Veuillez sélectionner une réponse avant de continuer.");
+    return;
+  }
+
   const isCorrect =
     repAttendue &&
     JSON.stringify(repAttendue.sort()) === JSON.stringify(selected.sort());
@@ -97,6 +103,7 @@ function nextQuestion() {
   }
 
   currentIndex++;
+
   if (currentIndex >= questions.length) {
     endQuiz();
   } else {
@@ -125,8 +132,6 @@ function endQuiz() {
 
     if (nextQuestions.length > 0) {
       questions = nextQuestions;
-      currentIndex = 0;
-      badAnswers = [];
       showQuestion();
       return;
     }
