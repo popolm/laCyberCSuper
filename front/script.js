@@ -132,6 +132,7 @@ function endQuiz() {
 
     if (nextQuestions.length > 0) {
       questions = nextQuestions;
+      currentIndex = 0;
       showQuestion();
       return;
     }
@@ -143,7 +144,7 @@ function endQuiz() {
   const adviceList = document.getElementById("advice-list");
   adviceList.innerHTML = "";
 
-  const scoreTotal = questions.length;
+  const scoreTotal = questions.length + badAnswers.length;
   const scoreBonnes = scoreTotal - badAnswers.length;
 
   const scoreDiv = document.createElement("div");
